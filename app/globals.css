@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/*
+ * Pancharm brand tokens — Ivory + Forest Green + Champagne Gold + Charcoal.
+ * `gold` is decorative only (lines, icons, borders): 2.46:1 on ivory.
+ * Gold-coloured TEXT uses `gold-deep` (≥4.7:1 on ivory/beige/white).
+ * Terracotta is reserved for the logo mark.
+ */
+@theme {
+  --color-ivory: #f8f5ef;
+  --color-beige: #efe9de;
+  --color-forest: #173d35;
+  --color-forest-dark: #102e28;
+  --color-mint: #dce9e0;
+  --color-ink: #242522;
+  --color-muted: #64655f;
+  --color-gold: #b89a63;
+  --color-gold-deep: #7f6130;
+  --color-line: #ded8ce;
+  --color-terracotta: #ac5444;
+
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;
+  background: var(--color-beige);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@layer components {
+  /* Landing chạy cho điện thoại: mọi màn hình đều hiển thị một cột ≤ 480px. */
+  .phone-shell {
+    @apply relative mx-auto min-h-dvh w-full max-w-[480px] bg-ivory;
+    box-shadow: 0 0 0 1px var(--color-line), 0 20px 60px rgba(36, 37, 34, 0.08);
+  }
+  .container-page {
+    @apply w-full px-5;
+  }
+  .section {
+    @apply py-10;
+  }
+  .h2 {
+    @apply font-serif text-[25px] leading-[1.25] font-semibold text-ink;
+  }
+  .lead {
+    @apply text-[15px] leading-relaxed text-muted;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-white;
+  }
+  .soft-shadow {
+    box-shadow: 0 8px 24px -12px rgba(23, 61, 53, 0.18);
+  }
+  .snap-row {
+    @apply -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-2;
+    scrollbar-width: none;
+  }
+  .snap-row::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
