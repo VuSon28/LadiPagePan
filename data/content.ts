@@ -231,9 +231,10 @@ export const certificates = {
     {
       src: "/images/dojilab/dojilab-phong-lab.webp",
       alt: "Chuyên viên DOJILAB soi kiểm định đá quý bằng kính hiển vi trong phòng thí nghiệm",
-      caption: "Phòng kiểm định DOJILAB · Ảnh: dojilab.vn",
+      caption: "Phòng kiểm định DOJILAB",
+      credit: "Ảnh: dojilab.vn",
     },
-  ],
+  ] as { src: string; alt: string; caption: string; credit?: string }[],
   items: [
     {
       id: "djl-g25-3076",
@@ -269,7 +270,8 @@ export const certificates = {
       alt: "Phiếu kết quả thử nghiệm DOJILAB Hà Nội, mẫu lắc kim loại màu trắng, kết quả Ag (Bạc)",
     },
   ] satisfies Certificate[],
-  note: "Các nguyên liệu đều được kiểm định đạt chuẩn trước khi thiết kế và sản xuất. Chạm vào ảnh để xem rõ chứng thư; tra cứu số phiếu tại dojilab.vn.",
+  note: "Các nguyên liệu đều được kiểm định đạt chuẩn trước khi thiết kế và sản xuất. Chạm vào ảnh để xem rõ chứng thư; tra cứu số phiếu tại",
+  noteLink: { label: "dojilab.vn", href: "https://dojilab.vn" },
 };
 
 export const privileges = {
