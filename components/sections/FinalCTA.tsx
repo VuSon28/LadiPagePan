@@ -19,7 +19,7 @@ export function FinalCTA() {
         </h2>
         <p className="mx-auto mt-3 max-w-[34ch] text-[15px] leading-relaxed text-ivory/85">{finalCta.body}</p>
         <div className="mt-6 flex justify-center">
-          <MessengerCTA id="final-cta" source="final" label={finalCta.cta} variant="light" className="w-auto min-w-[240px]" />
+          <MessengerCTA id="final-cta" source="final" label={finalCta.cta} className="w-auto min-w-[240px]" />
         </div>
       </div>
     </section>

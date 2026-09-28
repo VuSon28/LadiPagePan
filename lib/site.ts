@@ -6,7 +6,7 @@ export const site = {
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "",
 };
 
-export type CtaSource = "hero" | "process" | "benefit" | "final" | "sticky";
+export type CtaSource = "hero" | "process" | "benefit" | "offer" | "final" | "sticky";
 
 /**
  * m.me links carry `ref` through to the Page inbox/webhook, so the CTA

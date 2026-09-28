@@ -7,11 +7,12 @@ export function BatTuInsightSection() {
         <h2 id="insight-title" className="h2">
           {insight.title}
         </h2>
-        <p className="lead mt-3">{insight.body}</p>
+        <p className="mt-3 font-serif text-[18px] leading-snug font-medium text-ink">{insight.body}</p>
+        <p className="lead mt-3">{insight.detail}</p>
 
         <figure
           className="card soft-shadow mt-6 px-4 py-5"
-          aria-label="Giờ, ngày, tháng, năm sinh tạo thành Bát Tự, từ đó xác định ngũ hành vượng/khuyết"
+          aria-label="Giờ, ngày, tháng, năm sinh tạo thành Bát Tự để xác định ngũ hành vượng/khuyết; kết hợp với mục tiêu mong muốn để tìm ra tỷ lệ đá cần bổ sung"
         >
           <ul className="grid grid-cols-4 gap-1.5">
             {insight.inputs.map((label) => (
@@ -35,14 +36,28 @@ export function BatTuInsightSection() {
           <p className="mx-auto w-fit rounded-full bg-forest px-7 py-2 font-serif text-[16px] font-semibold text-white">
             {insight.core}
           </p>
-          <svg aria-hidden="true" viewBox="0 0 2 20" className="mx-auto h-5 w-0.5 text-gold">
-            <path d="M1 0v20" stroke="currentColor" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
-          </svg>
+          <Connector />
           <p className="mx-auto w-fit rounded-full bg-mint px-6 py-2.5 font-serif text-[16px] font-semibold text-forest">
             {insight.result}
+          </p>
+          <Connector />
+          <p className="mx-auto w-fit rounded-full border border-gold bg-ivory px-6 py-2.5 font-serif text-[16px] font-semibold text-gold-deep">
+            {insight.goal}
+          </p>
+          <Connector />
+          <p className="mx-auto w-fit max-w-full rounded-2xl bg-forest px-5 py-3 text-center font-serif text-[16px] leading-snug font-semibold text-white">
+            {insight.outcome}
           </p>
         </figure>
       </div>
     </section>
+  );
+}
+
+function Connector() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 2 20" className="mx-auto h-5 w-0.5 text-gold">
+      <path d="M1 0v20" stroke="currentColor" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
+    </svg>
   );
 }

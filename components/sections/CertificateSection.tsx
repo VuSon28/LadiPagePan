@@ -24,7 +24,25 @@ export function CertificateSection() {
         </h2>
         <p className="lead mt-3">{certificates.body}</p>
 
-        <ul className="mt-6 grid grid-cols-3 gap-2">
+        <ul className="mt-6 grid grid-cols-2 gap-2">
+          {certificates.photos.map((photo) => (
+            <li key={photo.src}>
+              <figure>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={600}
+                  height={800}
+                  sizes="(min-width: 480px) 220px, 50vw"
+                  className="aspect-[3/4] w-full rounded-xl object-cover"
+                />
+                <figcaption className="mt-1.5 text-[12px] leading-tight text-muted">{photo.caption}</figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+
+        <ul className="mt-5 grid grid-cols-3 gap-2">
           {certificates.items.map((cert) => (
             <li key={cert.id}>
               <button

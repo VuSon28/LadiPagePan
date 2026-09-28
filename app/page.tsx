@@ -8,7 +8,9 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { MeaningCards } from "@/components/sections/MeaningCards";
+import { OfferCountdown } from "@/components/sections/OfferCountdown";
 import { PrivilegesSection } from "@/components/sections/PrivilegesSection";
+import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 
@@ -22,10 +24,12 @@ export default function Home() {
         <BatTuInsightSection />
         <ConsultationProcess />
         <MeaningCards />
+        <ProductShowcase />
         <CollectionShowcase />
         <CertificateSection />
         <PrivilegesSection />
         <TestimonialsSection />
+        <OfferCountdown />
         <FAQSection />
         <FinalCTA />
       </main>

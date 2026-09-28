@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { collection } from "@/data/content";
-import { Pending } from "../Pending";
 
 export function CollectionShowcase() {
   return (
-    <section id="thiet-ke" aria-labelledby="collection-title" className="section bg-white">
+    <section id="thiet-ke" aria-labelledby="collection-title" className="section bg-white pt-2">
       <div className="container-page">
         <h2 id="collection-title" className="h2">
           {collection.title}
@@ -24,7 +23,6 @@ export function CollectionShowcase() {
             </li>
           ))}
         </ul>
-        {collection.pending && <Pending className="mt-5">{collection.pending}</Pending>}
       </div>
     </section>
   );

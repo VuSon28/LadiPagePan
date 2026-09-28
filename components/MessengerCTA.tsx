@@ -5,7 +5,8 @@ import { messengerHref, type CtaSource } from "@/lib/site";
 import { Icon } from "./Icon";
 
 const variants = {
-  primary: "bg-forest text-white hover:bg-forest-dark shadow-[0_10px_24px_-12px_rgba(23,61,53,0.7)]",
+  primary:
+    "bg-terracotta text-white hover:bg-terracotta-dark shadow-[0_10px_24px_-12px_rgba(143,67,54,0.75)]",
   light: "bg-ivory text-forest hover:bg-white",
 };
 

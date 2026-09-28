@@ -8,8 +8,21 @@ export function Footer() {
       <div className="container-page space-y-3">
         <Logo light />
         <p>Vòng đá phong thủy được thiết kế riêng theo Bát Tự của bạn.</p>
+        <ul className="space-y-1">
+          {footer.contact.map((item) => (
+            <li key={item.label}>
+              <span className="text-ivory/55">{item.label}: </span>
+              {item.href ? (
+                <a href={item.href} className="text-ivory underline-offset-4 hover:underline">
+                  {item.value}
+                </a>
+              ) : (
+                <span className="text-ivory">{item.value}</span>
+              )}
+            </li>
+          ))}
+        </ul>
         <FooterPending>{footer.pending.legal}</FooterPending>
-        <FooterPending>{footer.pending.contact}</FooterPending>
         <nav aria-label="Chính sách" className="flex flex-wrap gap-x-5 gap-y-2">
           <Link href="/chinh-sach-bao-mat" className="underline underline-offset-4 hover:text-white">
             Chính sách bảo mật

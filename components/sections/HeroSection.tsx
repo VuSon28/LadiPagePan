@@ -33,8 +33,19 @@ export function HeroSection() {
         <h1 id="hero-title" className="mt-3 max-w-[15ch] font-serif text-[31px] leading-[1.18] font-semibold text-ink">
           {hero.title}
         </h1>
-        <p className="mt-3 max-w-[58%] text-[14.5px] leading-relaxed text-ink/85">{hero.body}</p>
-        <div className="mt-6 [text-shadow:none]">
+        <p className="mt-3 max-w-[58%] text-[15px] leading-relaxed font-medium text-ink/85">{hero.body}</p>
+
+        <p className="mt-5 flex items-start gap-2.5 rounded-2xl border border-terracotta/30 bg-white/90 px-3.5 py-3 text-[14px] leading-snug text-ink [text-shadow:none]">
+          <Icon name="gift" className="mt-0.5 size-5 shrink-0 text-terracotta" />
+          <span>
+            {hero.offer.label}{" "}
+            <s className="text-muted decoration-terracotta decoration-2">{hero.offer.oldPrice}</s>{" "}
+            <strong className="animate-blink text-[17px] font-bold text-terracotta">{hero.offer.newPrice}</strong>{" "}
+            {hero.offer.suffix}
+          </span>
+        </p>
+
+        <div className="mt-4 [text-shadow:none]">
           <MessengerCTA id="hero-cta" source="hero" label={hero.cta} />
         </div>
         <ul className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-ink/80">

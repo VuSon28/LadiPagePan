@@ -4,7 +4,8 @@
  * Pancharm brand tokens — Ivory + Forest Green + Champagne Gold + Charcoal.
  * `gold` is decorative only (lines, icons, borders): 2.46:1 on ivory.
  * Gold-coloured TEXT uses `gold-deep` (≥4.7:1 on ivory/beige/white).
- * Terracotta is reserved for the logo mark.
+ * Terracotta: logo mark + conversion elements (CTA buttons, countdown) with
+ * white text (7.1:1). Keep it off body text and decoration.
  */
 @theme {
   --color-ivory: #f8f5ef;
@@ -18,6 +19,7 @@
   --color-gold-deep: #7f6130;
   --color-line: #ded8ce;
   --color-terracotta: #ac5444;
+  --color-terracotta-dark: #8f4336;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
@@ -79,6 +81,20 @@ body {
   .snap-row::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* Giá ưu đãi "0đ" nhấp nháy để hút mắt; tắt theo prefers-reduced-motion bên dưới. */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+.animate-blink {
+  animation: blink 1.1s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
