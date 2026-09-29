@@ -3,7 +3,7 @@ import { design, meaning } from "@/data/content";
 import { Icon } from "../Icon";
 import { MessengerCTA } from "../MessengerCTA";
 
-/** Ảnh tràn viền + thư viện ảnh thật + khối “Thiết kế theo mong muốn của riêng bạn”. */
+/** Ảnh tràn viền + khối “Thiết kế theo mong muốn của riêng bạn”. */
 export function CollectionShowcase() {
   return (
     <section id="thiet-ke" aria-labelledby="design-title" className="band-sand">
@@ -15,26 +15,6 @@ export function CollectionShowcase() {
         sizes="(min-width: 480px) 480px, 100vw"
         className="aspect-[4/3] w-full object-cover object-center"
       />
-
-      <div className="band-rose container-page py-9">
-        <h3 className="text-center font-serif text-[22px] leading-snug font-semibold text-[var(--heading)]">
-          {design.galleryTitle}
-        </h3>
-        <ul className="mt-4 grid grid-cols-3 gap-2">
-          {design.gallery.map((item) => (
-            <li key={item.src}>
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={720}
-                height={900}
-                sizes="(min-width: 480px) 150px, 33vw"
-                className="aspect-[4/5] w-full rounded-xl object-cover"
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <div className="container-page py-10 text-center">
         <h2 id="design-title" className="h2 whitespace-pre-line">

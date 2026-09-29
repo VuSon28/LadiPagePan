@@ -25,10 +25,11 @@
   /* Dải chuyên gia dưới hero: nền xanh mạ + chữ nâu đỏ (4.7:1). */
   --color-sprout: #c7d42b;
   --color-brick: #8b2e12;
-  /* Khối mẫu vòng: nền xanh rêu tối + chữ be hồng đỗ (11:1). Thư viện ảnh: nền hồng đỗ đậm + chữ kem (6:1). */
+  /* Khối mẫu vòng: nền xanh rêu tối + chữ be hồng đỗ (11:1). */
   --color-evergreen: #162c05;
   --color-blush: #ecc9be;
-  --color-rose: #8a4a4c;
+  /* Rosewood Dust: nền thư viện ảnh khách, tiêu đề xanh rêu đậm (#162C05). */
+  --color-rosewood: #aa6b75;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
@@ -92,13 +93,10 @@ body {
     --line-soft: rgba(236, 201, 190, 0.35);
     --fill-soft: rgba(236, 201, 190, 0.1);
   }
-  /* Dải hồng đỗ đậm + chữ kem: thư viện ảnh. */
-  .band-rose {
-    @apply bg-rose text-cream;
-    --heading: var(--color-cream);
-    --text-soft: rgba(253, 248, 240, 0.85);
-    --line-soft: rgba(253, 248, 240, 0.35);
-    --fill-soft: rgba(253, 248, 240, 0.1);
+  /* Dải Rosewood Dust: thư viện ảnh khách gửi về. */
+  .band-rosewood {
+    @apply bg-rosewood text-evergreen;
+    --heading: var(--color-evergreen);
   }
   .band-danger {
     @apply bg-danger text-cream;
