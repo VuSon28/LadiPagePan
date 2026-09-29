@@ -41,7 +41,7 @@ export function CertificateSection() {
                   )
                 }
                 aria-label={`Phóng to ảnh: ${photo.caption}`}
-                className="group block h-full w-full text-left"
+                className="group flex h-full w-full flex-col justify-start text-left"
               >
                 <Image
                   src={photo.src}
