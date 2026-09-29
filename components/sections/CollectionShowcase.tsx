@@ -16,7 +16,7 @@ export function CollectionShowcase() {
         className="aspect-[4/3] w-full object-cover object-center"
       />
 
-      <div className="band-evergreen container-page py-9">
+      <div className="band-pine container-page py-9">
         <h3 className="text-center font-serif text-[22px] leading-snug font-semibold text-[var(--heading)]">
           {design.galleryTitle}
         </h3>
