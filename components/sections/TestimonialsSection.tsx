@@ -1,141 +1,107 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { testimonials, type Review } from "@/data/content";
 import { gaEvent } from "@/lib/analytics";
-import { Icon } from "../Icon";
 import { SectionHeading } from "../SectionHeading";
 
-const PER_PAGE = 2;
-
-/** Băng đánh giá vuốt ngang, 2 thẻ mỗi trang kèm chấm chỉ trang như mockup. */
+/**
+ * Đánh giá trình bày kiểu khung bình luận (tên, nội dung, ảnh, dòng thời gian).
+ * Chỉ hiển thị số liệu có thật: số bình luận = số trích dẫn đang có; không bịa sao,
+ * lượt thích, "x phút trước" hay phản hồi của shop.
+ */
 export function TestimonialsSection() {
   const [expanded, setExpanded] = useState(false);
-  const [page, setPage] = useState(0);
-  const railRef = useRef<HTMLUListElement>(null);
-
   const visible = expanded ? testimonials.items : testimonials.items.slice(0, testimonials.initialCount);
   const hidden = testimonials.items.length - testimonials.initialCount;
-  const pages = Math.ceil(visible.length / PER_PAGE);
-
-  // Bề rộng một trang tính từ tổng chiều dài băng, không phụ thuộc bề rộng thẻ.
-  function pageWidth(rail: HTMLUListElement) {
-    return rail.scrollWidth / pages;
-  }
-
-  function onScroll() {
-    const rail = railRef.current;
-    if (!rail) return;
-    const i = Math.round(rail.scrollLeft / pageWidth(rail));
-    setPage(Math.min(Math.max(i, 0), pages - 1));
-  }
-
-  function goTo(i: number) {
-    const rail = railRef.current;
-    if (!rail) return;
-    rail.scrollTo({ left: i * pageWidth(rail), behavior: "smooth" });
-  }
 
   return (
     <section id="danh-gia" aria-labelledby="reviews-title" className="band-sand section">
       <div className="container-page">
         <SectionHeading id="reviews-title" title={testimonials.title} body={testimonials.subtitle} />
-      </div>
 
-      <ul
-        ref={railRef}
-        onScroll={onScroll}
-        className="snap-row mx-0 mt-7 items-stretch px-5"
-        aria-label="Đánh giá của khách hàng, vuốt ngang để xem thêm"
-      >
-        {visible.map((review, i) => (
-          <ReviewCard key={i} review={review} />
-        ))}
-      </ul>
+        <div className="mt-7 rounded-2xl border border-line bg-white px-4 pt-4 pb-2 text-ink shadow-sm">
+          <h3 className="text-[22px] font-bold tracking-tight text-[#4b4f56]">Tất cả bình luận</h3>
+          <div className="mt-3 flex items-center justify-between gap-3 border-b border-[#dddfe2] pb-3">
+            <p className="text-[14px] font-bold text-[#4b4f56]">{testimonials.items.length} Bình luận</p>
+            <p className="flex items-center gap-2 text-[12.5px] text-[#606770]">
+              Sắp xếp theo
+              <span className="rounded-md border border-[#ccd0d5] bg-[#f5f6f7] px-3 py-1.5 text-[13px] font-bold text-[#4b4f56]">
+                Hàng đầu
+              </span>
+            </p>
+          </div>
 
-      {pages > 1 && (
-        <div className="mt-3 flex justify-center gap-1.5">
-          {Array.from({ length: pages }, (_, i) => (
+          <ul>
+            {visible.map((review, i) => (
+              <Comment key={i} review={review} index={i} />
+            ))}
+          </ul>
+
+          {!expanded && hidden > 0 && (
             <button
-              key={i}
               type="button"
-              onClick={() => goTo(i)}
-              aria-label={`Xem nhóm đánh giá ${i + 1}`}
-              aria-current={i === page}
-              className={`h-1.5 rounded-full transition-all ${i === page ? "w-5 bg-clay" : "w-1.5 bg-clay/40"}`}
-            />
-          ))}
+              onClick={() => {
+                setExpanded(true);
+                gaEvent("reviews_expand");
+              }}
+              className="mb-2 flex min-h-12 w-full items-center justify-center rounded-md bg-[#f5f6f7] text-[14px] font-semibold text-[#385898] hover:bg-[#ebedf0]"
+            >
+              Xem thêm {hidden} bình luận
+            </button>
+          )}
         </div>
-      )}
 
-      <div className="container-page">
-        {!expanded && hidden > 0 && (
-          <button
-            type="button"
-            onClick={() => {
-              setExpanded(true);
-              gaEvent("reviews_expand");
-            }}
-            className="mt-5 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full border border-[var(--line-soft)] text-[14.5px] font-semibold text-clay hover:bg-[var(--fill-soft)]"
-          >
-            Xem thêm {hidden} đánh giá
-            <Icon name="chevron" className="size-4 rotate-90" strokeWidth={2} />
-          </button>
-        )}
         <p className="mt-4 text-center text-[12px] leading-snug text-muted">{testimonials.note}</p>
       </div>
     </section>
   );
 }
 
-function ReviewCard({ review }: { review: Review }) {
-  const initial = review.name.startsWith("Khách") ? "P" : review.name[0];
+/** Màu nền avatar chữ cái, xoay vòng theo thứ tự cho đỡ đơn điệu. */
+const avatarColors = ["bg-clay", "bg-evergreen", "bg-rosewood", "bg-brick", "bg-pine"];
+
+function Comment({ review, index }: { review: Review; index: number }) {
+  const anonymous = review.name.startsWith("Khách");
+  const initial = anonymous ? "P" : review.name[0];
+  const color = avatarColors[index % avatarColors.length];
+
   return (
-    <li className="card soft-shadow flex w-[calc((100%-0.75rem)/2)] shrink-0 snap-start flex-col p-3">
-      <div className="flex items-center gap-2.5">
-        <span
-          aria-hidden="true"
-          className="grid size-9 shrink-0 place-items-center rounded-full bg-sand font-serif text-[15px] font-semibold text-clay"
-        >
-          {initial}
-        </span>
-        <div className="min-w-0">
-          <p className="truncate text-[13px] font-semibold text-ink">{review.name}</p>
-          <p className="truncate text-[11px] text-muted">{review.meta}</p>
-        </div>
-      </div>
-
-      {review.rating && (
-        <div className="mt-2 flex gap-0.5" aria-label={`${review.rating} trên 5 sao`}>
-          {Array.from({ length: review.rating }, (_, i) => (
-            <Icon key={i} name="star" filled className="size-3.5 text-gold" />
+    <li className="flex gap-3 py-4">
+      <span
+        aria-hidden="true"
+        className={`grid size-12 shrink-0 place-items-center rounded-sm font-serif text-[20px] font-semibold text-white ${color}`}
+      >
+        {initial}
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-[15px] font-bold text-[#4b4f56]">{review.name}</p>
+        <div className="mt-1 space-y-1.5 text-[14.5px] leading-relaxed text-[#1c1e21]">
+          {review.quotes.map((quote) => (
+            <p key={quote}>{quote}</p>
           ))}
         </div>
-      )}
 
-      <div className="mt-2.5 space-y-1.5 text-[12.5px] leading-relaxed text-ink">
-        {review.quotes.slice(0, 2).map((quote) => (
-          <p key={quote}>{quote}</p>
-        ))}
+        {review.photos && (
+          <ul className="mt-2.5 flex flex-wrap gap-2">
+            {review.photos.slice(0, 2).map((photo) => (
+              <li key={photo.src} className="w-[calc(50%-0.25rem)] max-w-[150px]">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={300}
+                  height={300}
+                  sizes="150px"
+                  className="aspect-[3/4] w-full object-cover"
+                />
+              </li>
+            ))}
+          </ul>
+        )}
+
+        <p className="mt-2 text-[13px] text-[#385898]">{review.meta}</p>
       </div>
-
-      {review.photos && (
-        <ul className="mt-auto flex gap-1.5 pt-3">
-          {review.photos.slice(0, 2).map((photo) => (
-            <li key={photo.src} className="min-w-0 flex-1">
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                width={200}
-                height={200}
-                sizes="100px"
-                className="aspect-square w-full rounded-lg object-cover"
-              />
-            </li>
-          ))}
-        </ul>
-      )}
     </li>
   );
 }
