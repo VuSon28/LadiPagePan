@@ -141,121 +141,149 @@ export const meaning = {
 
 export type Product = {
   name: string;
-  collection: string;
-  detail: string;
+  /** Giá bản dây bạc (bản chuẩn); `fromPrice` = bản titan/cước rẻ nhất nếu có. */
   price: number;
+  fromPrice?: number;
   image: string;
   alt: string;
-  featured?: boolean;
 };
 
-/** Giá niêm yết lấy từ pancharm.vn (09/2026). Tỷ lệ đá thực tế được phối lại theo Bát Tự từng người. */
+/**
+ * Giá lấy từ "Pancharm giá bán sp [cập nhật 17072026].pdf" (bảng giá nội bộ số 2).
+ * Giá đã gồm thuế, áp dụng cổ tay 14–16cm. Phân khúc xếp theo giá bản bạc.
+ * Thiên Ân: dùng giá chính thức từ 22/07/2026. Ảnh tách từ chính file PDF.
+ * Không đưa mã sản phẩm / ghi chú nội bộ lên trang.
+ */
 export const products = {
   title: "Một số thiết kế tiêu biểu",
   body: "Mỗi chiếc vòng là một bản thiết kế riêng, phù hợp với năng lượng và mong muốn của từng khách hàng.",
-  moreLabel: "Xem thêm nhiều thiết kế khác",
-  lessLabel: "Thu gọn danh sách",
   segments: [
     {
-      label: "Dưới 1,3 triệu",
+      label: "Dưới 1 triệu",
       items: [
         {
-          name: "Vô Vi Phỉ Thúy Lam",
-          collection: "BST Vô Vi · Bạc",
-          detail: "Phỉ thúy lam phối hạt hồng, vàng",
-          price: 1155000,
-          image: "/images/products/vo-vi-phi-thuy-lam.webp",
-          alt: "Vòng Vô Vi Phỉ Thúy Lam hạt hồng, vàng và xanh có charm bạc",
-          featured: true,
+          name: "Thiên Vi ngũ hành 10 đá",
+          price: 499000,
+          fromPrice: 299000,
+          image: "/images/products/thien-vi-ngu-hanh-10-da.webp",
+          alt: "Lắc bạc Thiên Vi 10 viên đá ngũ hành nhiều màu kèm charm cỏ bốn lá",
         },
         {
-          name: "Thiên Vi Phỉ Thúy Lam",
-          collection: "BST Thiên Vi · Bạc",
-          detail: "Phỉ thúy lam xanh, charm bạc",
-          price: 1199000,
-          image: "/images/products/thien-vi-phi-thuy-lam.webp",
-          alt: "Bàn tay cầm vòng Thiên Vi phối ngọc phỉ thúy lam xanh, hạt hồng và vàng",
+          name: "Thiên Vi ngũ hành full đá tự do",
+          price: 599000,
+          fromPrice: 499000,
+          image: "/images/products/thien-vi-full-da-tu-do.webp",
+          alt: "Vòng Thiên Vi full đá tự do nhiều màu: vàng, xanh, hồng, trắng",
         },
         {
-          name: "Vô Vi Phỉ Thúy Huyết",
-          collection: "BST Vô Vi · Bạc",
-          detail: "Phỉ thúy huyết đỏ cam, hạt hồng",
-          price: 1205000,
-          image: "/images/products/vo-vi-phi-thuy-huyet.webp",
-          alt: "Vòng Vô Vi Phỉ Thúy Huyết hạt đỏ cam, hồng và bạc có charm",
+          name: "Trà An ngọc dây chỉ sáp",
+          price: 720000,
+          image: "/images/products/tra-an-ngoc-chi-sap.webp",
+          alt: "Vòng Trà An dây chỉ sáp màu be có hoa trà ngọc và charm chữ cái",
         },
         {
-          name: "Thiên Vi Phỉ Thúy Huyết",
-          collection: "BST Thiên Vi · Bạc",
-          detail: "Phỉ thúy huyết phối hạt vàng",
-          price: 1299000,
-          image: "/images/products/thien-vi-phi-thuy-huyet.webp",
-          alt: "Bàn tay cầm vòng Thiên Vi phối ngọc phỉ thúy huyết đỏ cam và hạt vàng",
+          name: "Thiên Vi full đá gần tròn",
+          price: 750000,
+          fromPrice: 550000,
+          image: "/images/products/thien-vi-full-da-gan-tron.webp",
+          alt: "Vòng Thiên Vi full đá gần tròn phối hồng, cam, xanh ngọc",
         },
       ],
     },
     {
-      label: "1,3 – 1,8 triệu",
+      label: "1 – 2 triệu",
       items: [
         {
-          name: "Thiên Vi Ngũ Hành 6 ly",
-          collection: "BST Thiên Vi · Bạc",
-          detail: "Full đá tròn 6 ly, đủ ngũ hành",
-          price: 1399000,
-          image: "/images/products/thien-vi-ngu-hanh-6ly.webp",
-          alt: "Bàn tay cầm vòng đá tròn 6 ly phối hạt hồng, vàng và xám",
+          name: "Thiên Vi full đá tròn 6 ly",
+          price: 1500000,
+          fromPrice: 1300000,
+          image: "/images/products/thien-vi-da-tron-6ly.webp",
+          alt: "Vòng Thiên Vi full đá tròn 6 ly phối hồng, vàng, xám, bi bạc",
         },
         {
-          name: "Trà An",
-          collection: "BST Trà An · Bạc",
-          detail: "Hoa ngọc xanh chạm khắc thủ công",
-          price: 1521000,
-          image: "/images/products/tra-an.webp",
-          alt: "Cổ tay đeo vòng Trà An có hoa ngọc xanh chạm khắc",
-          featured: true,
+          name: "Vô Vi Phỉ Thuý Lam",
+          price: 1550000,
+          image: "/images/products/vo-vi-phi-thuy-lam-pdf.webp",
+          alt: "Vòng Vô Vi phối ngọc trai, ngọc phỉ thuý lam bánh xe và charm trái tim bạc",
         },
         {
-          name: "Thiên Vi Mix Lu Thống",
-          collection: "BST Thiên Vi · Bạc",
-          detail: "Lu thống san hô cam",
-          price: 1699000,
-          image: "/images/products/thien-vi-lu-thong.webp",
-          alt: "Bàn tay cầm vòng Thiên Vi có lu thống san hô cam",
+          name: "Trà An ngọc Phỉ Thuý Lam",
+          price: 1550000,
+          fromPrice: 1350000,
+          image: "/images/products/tra-an-phi-thuy-lam.webp",
+          alt: "Vòng Trà An hoa trà ngọc, ngọc phỉ thuý lam và ngọc trai",
+        },
+        {
+          name: "Thiên Vi mix Lu Thống 6 ly",
+          price: 1780000,
+          fromPrice: 1580000,
+          image: "/images/products/thien-vi-lu-thong-6ly.webp",
+          alt: "Vòng Thiên Vi đá tròn 6 ly có một lu thống san hô đỏ ở giữa",
         },
       ],
     },
     {
-      label: "Trên 1,8 triệu",
+      label: "2 – 3 triệu",
       items: [
         {
-          name: "Phỉ Thúy Miến Điện 6 ly",
-          collection: "Bạc",
-          detail: "Mix thạch anh dâu tây",
-          price: 1825000,
-          image: "/images/products/phi-thuy-mien-dien-dau-tay.webp",
-          alt: "Vòng phỉ thúy Miến Điện xanh nhạt phối một hạt thạch anh dâu tây",
+          name: "Ngọc Phỉ Thuý Miến Điện mục tiêu",
+          price: 2060000,
+          fromPrice: 1860000,
+          image: "/images/products/ngoc-mien-dien-muc-tieu.webp",
+          alt: "Vòng full ngọc phỉ thuý Miến Điện 6 ly có một viên đá hồng ở giữa và charm bạc",
         },
         {
-          name: "Lam Ngọc Hoa Trà 8 ly",
-          collection: "Bạc",
-          detail: "Tì hưu và hoa trà ngọc chạm khắc",
-          price: 1825000,
-          image: "/images/products/lam-ngoc-hoa-tra-ti-huu.webp",
-          alt: "Vòng lam ngọc 8 ly có tì hưu xanh đậm và hoa trà ngọc",
+          name: "Thiên Vi full đá tròn 8 ly Tì Hưu",
+          price: 2390000,
+          fromPrice: 2190000,
+          image: "/images/products/thien-vi-ti-huu-8ly-pdf.webp",
+          alt: "Vòng Thiên Vi đá tròn 8 ly có tì hưu ngọc phỉ thuý lam và charm bạc",
         },
         {
-          name: "Thiên Vi Tì Hưu 8 ly",
-          collection: "BST Thiên Vi · Bạc",
-          detail: "Full đá tròn 8 ly, tì hưu ngọc",
-          price: 2315000,
-          image: "/images/products/thien-vi-ti-huu-8ly.webp",
-          alt: "Vòng Thiên Vi đá tròn 8 ly có tì hưu ngọc xanh",
-          featured: true,
+          name: "Thiên Ân quấn 1 Phúc – Lộc – Thọ",
+          price: 2525000,
+          fromPrice: 2325000,
+          image: "/images/products/thien-an-quan-1.webp",
+          alt: "Tay cầm vòng Thiên Ân quấn 1: ngọc bích xanh, đá bánh xe nhiều màu và charm rơi",
+        },
+        {
+          name: "Lắc tay Thiên Ân mục tiêu",
+          price: 2725000,
+          image: "/images/products/lac-thien-an-muc-tieu.webp",
+          alt: "Lắc tay bạc Thiên Ân có đồng điếu ngọc phỉ thuý và đá bánh xe nhiều màu",
+        },
+      ],
+    },
+    {
+      label: "Từ 3 triệu",
+      items: [
+        {
+          name: "Thiên Ân quấn 1 charm hoa Ưu Đàm",
+          price: 3150000,
+          fromPrice: 2950000,
+          image: "/images/products/thien-an-quan-1-uu-dam.webp",
+          alt: "Vòng Thiên Ân ngọc bích xanh, đồng điếu ngọc trắng và charm hoa ưu đàm",
+        },
+        {
+          name: "Thiên Ân quấn 3 Ngũ Phúc",
+          price: 6025000,
+          fromPrice: 5825000,
+          image: "/images/products/thien-an-quan-3-ngu-phuc.webp",
+          alt: "Vòng Thiên Ân quấn 3 vòng: ngọc bích xanh, đá bánh xe cam hồng và đồng điếu ngọc",
+        },
+        {
+          name: "Thiên Ân quấn 3 Phúc – Lộc – Thọ",
+          price: 6290000,
+          fromPrice: 6090000,
+          image: "/images/products/thien-an-quan-3-phuc-loc-tho.webp",
+          alt: "Vòng Thiên Ân quấn 3 trải trên khay: ngọc bích xanh, đá bánh xe và charm rơi",
         },
       ],
     },
   ] satisfies { label: string; items: Product[] }[],
-  note: "Giá tham khảo theo mẫu. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",
+  /** Ô thứ 4 cho phân khúc chưa đủ 4 mẫu. */
+  customTile: { title: "Thiết kế riêng theo yêu cầu", body: "Nhắn Pancharm để được báo giá" },
+  note: "Giá bản dây bạc, đã gồm thuế, miễn phí vận chuyển; áp dụng cổ tay 14–16cm. Bản titan/cước có giá thấp hơn. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",
 };
 
 /** Khối “Thiết kế theo mong muốn của riêng bạn”: ảnh tràn viền + chip mong muốn + thư viện ảnh thật. */
@@ -559,7 +587,7 @@ export const faq = {
     {
       id: "gia",
       q: "Giá được tính ra sao?",
-      a: "Các mẫu vòng Pancharm có giá tham khảo từ 1.155.000đ đến 2.315.000đ. Giá cuối cùng phụ thuộc vào loại đá, chất liệu và phương án thiết kế; tư vấn viên sẽ báo giá cụ thể sau khi bạn chọn phương án phù hợp.",
+      a: "Các mẫu vòng Pancharm có giá từ 299.000đ (bản dây titan) đến khoảng 6.300.000đ, đã gồm thuế và miễn phí vận chuyển. Giá cuối cùng phụ thuộc vào loại đá, chất liệu và phương án thiết kế; tư vấn viên sẽ báo giá cụ thể sau khi bạn chọn phương án phù hợp.",
     },
   ] as { id: string; q: string; a: string; pending?: string }[],
 };
