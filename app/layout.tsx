@@ -1,20 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Be_Vietnam_Pro, Lora } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const lora = Lora({
-  variable: "--font-lora",
+// Cặp font theo mẫu tham chiếu: Playfair Display (tiêu đề, có nghiêng) + Inter (chữ thường).
+// Dùng bản variable nên không cần liệt kê từng độ đậm.
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin", "vietnamese"],
-  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const beVietnam = Be_Vietnam_Pro({
-  variable: "--font-be-vietnam",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -46,7 +47,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="vi" className={`${lora.variable} ${beVietnam.variable} antialiased`}>
+    <html lang="vi" className={`${playfair.variable} ${inter.variable} antialiased`}>
       <body>
         <div className="phone-shell">{children}</div>
         <Analytics />
