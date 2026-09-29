@@ -9,7 +9,7 @@ const vnd = new Intl.NumberFormat("vi-VN");
 /** Mỗi phân khúc giá là một lưới 2×2; phân khúc thiếu mẫu được bù bằng ô "thiết kế riêng". */
 export function ProductShowcase() {
   return (
-    <section id="mau-vong" aria-labelledby="products-title" className="band-clay section">
+    <section id="mau-vong" aria-labelledby="products-title" className="band-evergreen section">
       <div className="container-page">
         <SectionHeading id="products-title" title={products.title} body={products.body} />
 
@@ -17,7 +17,7 @@ export function ProductShowcase() {
           {products.segments.map((segment) => (
             <div key={segment.label}>
               <h3 className="flex items-center gap-2 font-serif text-[18px] font-semibold">
-                <span aria-hidden="true" className="h-5 w-1 rounded-full bg-cream" />
+                <span aria-hidden="true" className="h-5 w-1 rounded-full bg-blush" />
                 {segment.label}
               </h3>
               <ul className="mt-3 grid grid-cols-2 gap-3">
@@ -63,7 +63,7 @@ function CustomTile() {
     <li>
       <MessengerLink
         source="benefit"
-        className="flex h-full flex-col items-center justify-center gap-3 rounded-[22px] border border-dashed border-[var(--line-soft)] bg-[var(--fill-soft)] p-4 text-center transition-colors hover:bg-cream/15"
+        className="flex h-full flex-col items-center justify-center gap-3 rounded-[22px] border border-dashed border-[var(--line-soft)] bg-[var(--fill-soft)] p-4 text-center transition-colors hover:bg-blush/15"
       >
         <span className="icon-ring size-12">
           <Icon name="chat" filled className="size-5" />

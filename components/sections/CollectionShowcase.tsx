@@ -16,8 +16,8 @@ export function CollectionShowcase() {
         className="aspect-[4/3] w-full object-cover object-center"
       />
 
-      <div className="container-page pt-9">
-        <h3 className="text-center text-[12px] font-semibold tracking-[0.16em] text-muted uppercase">
+      <div className="band-rose container-page py-9">
+        <h3 className="text-center font-serif text-[22px] leading-snug font-semibold text-[var(--heading)]">
           {design.galleryTitle}
         </h3>
         <ul className="mt-4 grid grid-cols-3 gap-2">
