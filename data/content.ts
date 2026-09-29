@@ -295,7 +295,7 @@ export const design = {
   title: "Thiết kế theo mong muốn\ncủa riêng bạn",
   body: "Từ màu sắc, loại đá đến charm, tất cả đều được chọn lựa và chế tác riêng theo năng lượng và câu chuyện của bạn.",
   cta: "Nhận tư vấn thiết kế vòng",
-  galleryTitle: "Ảnh thật từ Pancharm",
+  galleryTitle: "Ảnh khách hàng gửi về",
   gallery: [
     { src: "/images/designs/design-08.webp", alt: "Bàn tay cầm vòng hạt hồng và vàng có mặt đá xanh đậm chạm khắc" },
     { src: "/images/designs/design-03.webp", alt: "Cổ tay đeo nhiều vòng hạt xanh ngọc và hạt hồng, vàng" },
