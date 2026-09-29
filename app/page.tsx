@@ -4,7 +4,6 @@ import { BatTuInsightSection } from "@/components/sections/BatTuInsightSection";
 import { BeliefStatement } from "@/components/sections/BeliefStatement";
 import { CertificateSection } from "@/components/sections/CertificateSection";
 import { CollectionShowcase } from "@/components/sections/CollectionShowcase";
-import { ConsultationProcess } from "@/components/sections/ConsultationProcess";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -14,8 +13,9 @@ import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 
-// Thứ tự khối bám theo mockup đã duyệt. ExpertSection tạm ẩn cho tới khi có ảnh +
-// thông tin chuyên gia đã xác minh.
+// Thứ tự khối bám theo mockup đã duyệt.
+// Đang tạm ẩn: ConsultationProcess (quy trình 4 bước) và ExpertSection — component và
+// nội dung vẫn còn, thêm lại bằng cách import rồi chèn vào <main> bên dưới.
 export default function Home() {
   return (
     <>
@@ -23,15 +23,14 @@ export default function Home() {
         <HeroSection />
         <TrustStrip />
         <BeliefStatement />
-        <ConsultationProcess />
         <BatTuInsightSection />
         <ProductShowcase />
         <CollectionShowcase />
         <CertificateSection />
         <TestimonialsSection />
         <PrivilegesSection />
-        <OfferCountdown />
         <FAQSection />
+        <OfferCountdown />
         <FinalCTA />
       </main>
       <Footer />

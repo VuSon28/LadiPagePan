@@ -3,8 +3,11 @@
 Landing page mobile-first cho funnel **TikTok Ads → Landing → Messenger → Tư vấn Bát Tự**, dựng theo `01_Pancharm_Landing_PreCode_Spec_v1.docx`.
 
 - Next.js 16 (App Router, Turbopack) + Tailwind CSS v4
-- Bảng màu: nền đất nung (`clay`) chạy suốt trang, nội dung nằm trong thẻ kem (`cream`). Khối kiểm định là dải nền kem để đổi nhịp.
-- Thứ tự khối theo mockup: hero ảnh tràn viền → 4 cam kết → tuyên ngôn “Không chỉ là màu hợp mệnh” → quy trình 4 bước dạng timeline + CTA → sơ đồ Bát Tự → 3 thiết kế tiêu biểu (bấm để xem toàn bộ) → ảnh tràn viền + thư viện + “Thiết kế theo mong muốn” → kiểm định DOJILAB → băng đánh giá vuốt ngang → đặc quyền → ưu đãi đếm ngược → FAQ → CTA cuối kèm 3 số liệu. Phần Chuyên gia (`ExpertSection`) đang tạm ẩn trong `app/page.tsx`.
+- Bảng màu: cam Copper Skillet `#B95118` (PANTONE 20-0058 TPM) + nền be vàng gần trắng `#FBF6EC`. Trang chạy theo nhịp đảo màu, khai báo bằng ba class dải trong `app/globals.css`: `.band-clay` (nền cam, chữ be), `.band-sand` (nền be, chữ cam) và `.band-danger` (`#C9331A`, dành riêng cho đoạn cao trào cuối trang). Mỗi dải tự đặt sẵn `--heading`, `--text-soft`, `--line-soft`, `--fill-soft` nên phần bên trong khối dùng chung một bộ class cho cả ba dải.
+- Chữ thân bài trên nền be dùng nâu đậm `--color-ink`, không dùng cam: cam trên be chỉ đạt 4,6:1, đủ chuẩn cho tiêu đề và nhãn nhưng mỏi mắt khi đọc cả đoạn.
+- Thứ tự khối, màu dải đi kèm trong ngoặc: hero ảnh tràn viền (cam) → 4 cam kết (cam) → tuyên ngôn “Không chỉ là màu hợp mệnh” (be) → sơ đồ Bát Tự (be) → 3 thiết kế tiêu biểu, bấm để xem toàn bộ (cam) → ảnh tràn viền + thư viện + “Thiết kế theo mong muốn” (be) → kiểm định DOJILAB (cam) → băng đánh giá vuốt ngang (be) → đặc quyền (cam) → FAQ (be) → ưu đãi đếm ngược (đỏ cam) → CTA cuối kèm 3 số liệu (đỏ cam).
+- Ưu đãi đếm ngược nằm **sau** FAQ để hai dải màu nóng dồn liền nhau thành một cú thúc cuối trang.
+- Đang tạm ẩn trong `app/page.tsx`: `ConsultationProcess` (quy trình 4 bước) và `ExpertSection`. Component và nội dung vẫn còn, thêm lại bằng cách import rồi chèn vào `<main>`.
 - Hai khối **đặc quyền** và **ưu đãi đếm ngược** không có trong mockup nhưng được giữ lại; bỏ đi thì xoá dòng tương ứng trong `app/page.tsx`.
 - Font: Lora (tiêu đề, serif) + Be Vietnam Pro (nội dung)
 - Chỉ có bố cục điện thoại: mọi màn hình (kể cả máy tính) đều hiển thị một cột rộng tối đa 480px, căn giữa (`.phone-shell` trong `app/globals.css`)

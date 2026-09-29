@@ -21,12 +21,12 @@ export function CertificateSection() {
   }
 
   return (
-    <section id="kiem-dinh" aria-labelledby="cert-title" className="section bg-cream text-ink">
+    <section id="kiem-dinh" aria-labelledby="cert-title" className="band-clay section">
       <div className="container-page">
-        <h2 id="cert-title" className="h2 text-ink">
+        <h2 id="cert-title" className="h2">
           {certificates.title}
         </h2>
-        <p className="lead text-muted">{certificates.body}</p>
+        <p className="lead">{certificates.body}</p>
 
         <ul className="mt-6 grid grid-cols-2 gap-3">
           {certificates.photos.map((photo) => (
@@ -51,8 +51,8 @@ export function CertificateSection() {
                   sizes="(min-width: 480px) 220px, 50vw"
                   className="aspect-[3/4] w-full rounded-2xl object-cover"
                 />
-                <span className="mt-2 block text-[12.5px] leading-snug font-medium text-ink">{photo.caption}</span>
-                {photo.credit && <span className="mt-0.5 block text-[11px] text-muted">{photo.credit}</span>}
+                <span className="mt-2 block text-[12.5px] leading-snug font-medium">{photo.caption}</span>
+                {photo.credit && <span className="mt-0.5 block text-[11px] text-[var(--text-soft)]">{photo.credit}</span>}
               </button>
             </li>
           ))}
@@ -91,8 +91,8 @@ export function CertificateSection() {
                     <Icon name="zoom" className="size-4" />
                   </span>
                 </span>
-                <span className="mt-2 block text-[11.5px] leading-tight font-medium text-ink">{cert.title}</span>
-                <span className="mt-1 block text-[10.5px] leading-tight tracking-wide text-muted uppercase">
+                <span className="mt-2 block text-[11.5px] leading-tight font-medium">{cert.title}</span>
+                <span className="mt-1 block text-[10.5px] leading-tight tracking-wide text-[var(--text-soft)] uppercase">
                   {cert.reportNo}
                 </span>
               </button>
@@ -100,7 +100,7 @@ export function CertificateSection() {
           ))}
         </ul>
 
-        <p className="mt-5 flex items-center gap-3 rounded-2xl bg-cream-dim px-4 py-3.5 text-[12.5px] leading-snug text-muted">
+        <p className="card mt-5 flex items-center gap-3 px-4 py-3.5 text-[12.5px] leading-snug text-muted">
           <span className="grid size-10 shrink-0 place-items-center rounded-full border border-line bg-white text-clay">
             <Icon name="shield" className="size-5" />
           </span>

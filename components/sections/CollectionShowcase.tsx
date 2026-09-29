@@ -6,7 +6,7 @@ import { MessengerCTA } from "../MessengerCTA";
 /** Ảnh tràn viền + thư viện ảnh thật + khối “Thiết kế theo mong muốn của riêng bạn”. */
 export function CollectionShowcase() {
   return (
-    <section id="thiet-ke" aria-labelledby="design-title">
+    <section id="thiet-ke" aria-labelledby="design-title" className="band-sand">
       <Image
         src={design.band.src}
         alt={design.band.alt}
@@ -17,7 +17,7 @@ export function CollectionShowcase() {
       />
 
       <div className="container-page pt-9">
-        <h3 className="text-center text-[12px] font-semibold tracking-[0.16em] text-cream/75 uppercase">
+        <h3 className="text-center text-[12px] font-semibold tracking-[0.16em] text-muted uppercase">
           {design.galleryTitle}
         </h3>
         <ul className="mt-4 grid grid-cols-3 gap-2">
@@ -37,7 +37,7 @@ export function CollectionShowcase() {
       </div>
 
       <div className="container-page py-10 text-center">
-        <h2 id="design-title" className="h2 whitespace-pre-line text-cream">
+        <h2 id="design-title" className="h2 whitespace-pre-line">
           {design.title}
         </h2>
         <p className="lead">{design.body}</p>
@@ -46,7 +46,7 @@ export function CollectionShowcase() {
           {meaning.items.map((item) => (
             <li
               key={item.title}
-              className="flex items-center gap-1.5 rounded-full border border-cream/30 bg-cream/10 px-3 py-1.5 text-[13px] font-medium text-cream"
+              className="flex items-center gap-1.5 rounded-full border border-[var(--line-soft)] bg-[var(--fill-soft)] px-3 py-1.5 text-[13px] font-medium text-clay"
             >
               <Icon name={item.icon} className="size-4" strokeWidth={1.4} />
               {item.title}
@@ -54,10 +54,10 @@ export function CollectionShowcase() {
           ))}
         </ul>
 
-        <p className="mx-auto mt-4 max-w-[38ch] text-[12px] leading-snug text-cream/70 italic">{meaning.disclaimer}</p>
+        <p className="mx-auto mt-4 max-w-[38ch] text-[12px] leading-snug text-muted italic">{meaning.disclaimer}</p>
 
         <div className="mt-6 flex justify-center">
-          <MessengerCTA source="benefit" label={design.cta} />
+          <MessengerCTA source="benefit" label={design.cta} variant="clay" />
         </div>
       </div>
     </section>

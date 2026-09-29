@@ -11,17 +11,17 @@ export function FAQSection() {
   const hidden = faq.items.length - faq.initialCount;
 
   return (
-    <section id="hoi-dap" aria-labelledby="faq-title" className="section">
+    <section id="hoi-dap" aria-labelledby="faq-title" className="band-sand section">
       <div className="container-page">
         <div className="flex items-baseline justify-between gap-3">
-          <h2 id="faq-title" className="font-serif text-[24px] leading-tight font-semibold text-cream">
+          <h2 id="faq-title" className="font-serif text-[24px] leading-tight font-semibold text-clay">
             {faq.title}
           </h2>
           {hidden > 0 && (
             <button
               type="button"
               onClick={() => setShowAll((v) => !v)}
-              className="flex shrink-0 items-center gap-1 text-[13px] font-medium text-cream/85 hover:text-cream"
+              className="flex shrink-0 items-center gap-1 text-[13px] font-medium text-muted hover:text-clay"
             >
               {showAll ? "Thu gọn" : faq.moreLabel}
               <Icon name="chevron" className={`size-3.5 ${showAll ? "-rotate-90" : ""}`} strokeWidth={2} />
@@ -46,7 +46,7 @@ export function FAQSection() {
                 {item.a && <p>{item.a}</p>}
                 {item.pending && (
                   <p
-                    className={`rounded-xl border border-dashed border-clay/60 bg-cream-dim px-4 py-3 text-[13px] text-ink ${item.a ? "mt-3" : ""}`}
+                    className={`rounded-xl border border-dashed border-clay/60 bg-sand px-4 py-3 text-[13px] text-ink ${item.a ? "mt-3" : ""}`}
                   >
                     <span className="font-semibold text-clay">[CẦN BỔ SUNG]</span> {item.pending}
                   </p>

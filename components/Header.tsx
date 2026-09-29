@@ -39,7 +39,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-12 items-center justify-between rounded-2xl px-4 text-[15px] font-medium hover:bg-cream-dim"
+                  className="flex min-h-12 items-center justify-between rounded-2xl px-4 text-[15px] font-medium hover:bg-sand"
                 >
                   {item.label}
                   <Icon name="chevron" className="size-4 text-clay" strokeWidth={2} />

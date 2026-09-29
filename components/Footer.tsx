@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-clay-deep pt-10 pb-28 text-[13px] text-cream/75">
+    <footer className="bg-clay-deep pt-10 pb-28 text-[13px] text-cream/80">
       <div className="container-page space-y-3">
         <Logo />
         <p>Vòng đá phong thủy được thiết kế riêng theo Bát Tự của bạn.</p>

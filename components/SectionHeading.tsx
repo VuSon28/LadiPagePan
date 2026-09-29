@@ -1,24 +1,21 @@
-/** Tiêu đề khu vực theo mockup: canh giữa, serif, kèm câu dẫn ngắn. */
+/** Tiêu đề khu vực: canh giữa, serif. Màu lấy theo dải (`band-*`) đang bao ngoài. */
 export function SectionHeading({
   title,
   body,
   id,
-  tone = "cream",
   className = "",
 }: {
   title: string;
   body?: string;
   id?: string;
-  tone?: "cream" | "ink";
   className?: string;
 }) {
-  const ink = tone === "ink";
   return (
     <div className={className}>
-      <h2 id={id} className={`h2 whitespace-pre-line ${ink ? "text-ink" : "text-cream"}`}>
+      <h2 id={id} className="h2 whitespace-pre-line">
         {title}
       </h2>
-      {body && <p className={`lead ${ink ? "text-muted" : ""}`}>{body}</p>}
+      {body && <p className="lead">{body}</p>}
     </div>
   );
 }

@@ -15,7 +15,7 @@ export function ProductShowcase() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="mau-vong" aria-labelledby="products-title" className="section">
+    <section id="mau-vong" aria-labelledby="products-title" className="band-clay section">
       <div className="container-page">
         <SectionHeading id="products-title" title={products.title} body={products.body} />
 
@@ -29,10 +29,10 @@ export function ProductShowcase() {
           <div className="mt-7 space-y-6">
             {products.segments.map((segment) => (
               <div key={segment.label}>
-                <h3 className="flex items-center gap-2 text-[14px] font-semibold text-cream">
-                  <span aria-hidden="true" className="h-4 w-1 rounded-full bg-cream/70" />
+                <h3 className="flex items-center gap-2 text-[14px] font-semibold">
+                  <span aria-hidden="true" className="h-4 w-1 rounded-full bg-[var(--text-soft)]" />
                   {segment.label}
-                  <span className="text-[12.5px] font-normal text-cream/70">· {segment.items.length} mẫu</span>
+                  <span className="text-[12.5px] font-normal text-[var(--text-soft)]">· {segment.items.length} mẫu</span>
                 </h3>
                 <ul className="mt-3 grid grid-cols-2 gap-3">
                   {segment.items.map((item) => (
@@ -64,13 +64,13 @@ export function ProductShowcase() {
             setExpanded((v) => !v);
             if (!expanded) gaEvent("products_expand");
           }}
-          className="mt-6 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full border border-cream/55 text-[14.5px] font-semibold text-cream transition-colors hover:bg-cream/10"
+          className="mt-6 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full border border-[var(--line-soft)] text-[14.5px] font-semibold transition-colors hover:bg-[var(--fill-soft)]"
         >
           {expanded ? products.lessLabel : products.moreLabel}
           <Icon name="chevron" className={`size-4 ${expanded ? "-rotate-90" : ""}`} strokeWidth={2} />
         </button>
 
-        <p className="mt-4 text-center text-[12.5px] leading-snug text-cream/75">{products.note}</p>
+        <p className="mt-4 text-center text-[12.5px] leading-snug text-[var(--text-soft)]">{products.note}</p>
       </div>
     </section>
   );

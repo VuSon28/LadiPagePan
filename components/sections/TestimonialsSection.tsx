@@ -38,7 +38,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section id="danh-gia" aria-labelledby="reviews-title" className="section">
+    <section id="danh-gia" aria-labelledby="reviews-title" className="band-sand section">
       <div className="container-page">
         <SectionHeading id="reviews-title" title={testimonials.title} body={testimonials.subtitle} />
       </div>
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
               onClick={() => goTo(i)}
               aria-label={`Xem nhóm đánh giá ${i + 1}`}
               aria-current={i === page}
-              className={`h-1.5 rounded-full transition-all ${i === page ? "w-5 bg-cream" : "w-1.5 bg-cream/45"}`}
+              className={`h-1.5 rounded-full transition-all ${i === page ? "w-5 bg-clay" : "w-1.5 bg-clay/40"}`}
             />
           ))}
         </div>
@@ -77,13 +77,13 @@ export function TestimonialsSection() {
               setExpanded(true);
               gaEvent("reviews_expand");
             }}
-            className="mt-5 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full border border-cream/55 text-[14.5px] font-semibold text-cream hover:bg-cream/10"
+            className="mt-5 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full border border-[var(--line-soft)] text-[14.5px] font-semibold text-clay hover:bg-[var(--fill-soft)]"
           >
             Xem thêm {hidden} đánh giá
             <Icon name="chevron" className="size-4 rotate-90" strokeWidth={2} />
           </button>
         )}
-        <p className="mt-4 text-center text-[12px] leading-snug text-cream/70">{testimonials.note}</p>
+        <p className="mt-4 text-center text-[12px] leading-snug text-muted">{testimonials.note}</p>
       </div>
     </section>
   );
@@ -96,7 +96,7 @@ function ReviewCard({ review }: { review: Review }) {
       <div className="flex items-center gap-2.5">
         <span
           aria-hidden="true"
-          className="grid size-9 shrink-0 place-items-center rounded-full bg-cream-dim font-serif text-[15px] font-semibold text-clay"
+          className="grid size-9 shrink-0 place-items-center rounded-full bg-sand font-serif text-[15px] font-semibold text-clay"
         >
           {initial}
         </span>

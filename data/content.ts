@@ -7,8 +7,8 @@
  */
 
 export const nav = [
-  { href: "#quy-trinh", label: "Quy trình tư vấn" },
   { href: "#mau-vong", label: "Mẫu vòng & giá" },
+  { href: "#thiet-ke", label: "Thiết kế theo mong muốn" },
   { href: "#kiem-dinh", label: "Hồ sơ kiểm định" },
   { href: "#danh-gia", label: "Khách hàng nói gì" },
   { href: "#uu-dai", label: "Ưu đãi hôm nay" },
@@ -17,8 +17,14 @@ export const nav = [
 
 export const hero = {
   eyebrow: "Vòng đá phong thủy cá nhân hóa",
-  title: "Một chiếc vòng được thiết kế riêng theo sinh nhật và mong muốn của bạn",
-  body: "Pancharm kết hợp Bát Tự – Ngũ Hành cùng đá quý tự nhiên, tạo nên chiếc vòng hài hòa năng lượng, đồng hành cùng bạn trên hành trình cuộc sống.",
+  title: "Một chiếc vòng được thiết kế riêng theo sinh nhật và ước muốn của bạn",
+  body: "Sống thuận mệnh là chìa khoá hoá giải vận hạn, khó khăn.",
+  offer: {
+    label: "Tặng ngay lá số và luận giải trị giá",
+    oldPrice: "500.000đ",
+    newPrice: "0đ",
+    suffix: "ngay hôm nay",
+  },
   cta: "Nhận tư vấn Bát Tự miễn phí",
   image: {
     src: "/images/hero/hero-pancharm-mobile.webp",
@@ -27,10 +33,10 @@ export const hero = {
 };
 
 export const trustItems = [
-  { icon: "yinyang", label: "20+ năm\nkinh nghiệm" },
-  { icon: "gem", label: "Đá ngọc\ntự nhiên" },
-  { icon: "pen", label: "Thiết kế\nđộc bản" },
-  { icon: "bell", label: "Bảo hành\n1 năm" },
+  { icon: "yinyang", label: "Chuyên gia phong thuỷ 20+ năm kinh nghiệm" },
+  { icon: "gem", label: "Cam kết đá/ngọc tự nhiên" },
+  { icon: "bracelet", label: "Mỗi chiếc vòng là độc bản" },
+  { icon: "shield", label: "Bảo hành 1 năm" },
 ];
 
 /** Khối tuyên ngôn giữa hero và quy trình. */
@@ -41,8 +47,10 @@ export const belief = {
 };
 
 export const insight = {
-  title: "Sinh nhật của bạn tiết lộ điều gì?",
-  body: "Từ 4 yếu tố ngày sinh, chúng tôi phân tích Bát Tự để xác định ngũ hành vượng/khuyết, từ đó tư vấn loại đá và thiết kế phù hợp.",
+  title: "Có phải bạn đang chọn vòng hợp mệnh hay mệnh khuyết?",
+  body: "10 người mệnh Hoả nhưng có 10 tính cách khác nhau, vậy có thể đeo cùng 1 loại đá không?",
+  detail:
+    "Pancharm xem xét đầy đủ ngày, tháng, năm, giờ sinh (Bát Tự) để xác định ngũ hành vượng – khuyết, kết hợp với mục tiêu của bạn để tìm ra loại đá và tỷ lệ phối phù hợp.",
   inputs: [
     { label: "Giờ sinh", sub: "(Thời)", icon: "clock" },
     { label: "Ngày sinh", sub: "(Nhật)", icon: "sun" },
@@ -58,7 +66,8 @@ export const insight = {
     { label: "Kim", icon: "metal" },
     { label: "Thủy", icon: "drop" },
   ],
-  outcome: "Kết hợp cùng mong muốn của bạn để tìm ra tỷ lệ đá cần bổ sung.",
+  goal: "Mục tiêu mong muốn",
+  outcome: "Tìm ra chính xác tỷ lệ bạn cần bổ sung",
 };
 
 export const process = {
@@ -267,7 +276,7 @@ export const certificates = {
   body: "Pancharm lựa chọn đá và chất liệu có hồ sơ kiểm định áp dụng theo từng mẫu, giúp bạn an tâm hơn khi lựa chọn.",
   photos: [
     {
-      src: "/images/dojilab/pancharm-tai-dojilab.webp",
+      src: "/images/dojilab/pancharm-tai-dojilab-v2.webp",
       alt: "Đại diện Pancharm đứng trước biển Viện Ngọc học và Trang sức DOJILAB Hà Nội",
       caption: "Pancharm tại Viện DOJILAB Hà Nội",
     },

@@ -17,6 +17,12 @@ const variants = {
     glyph: "bg-cream/20 text-cream",
     arrow: "border-cream/40 text-cream",
   },
+  /** Nút màu cảnh báo, dành cho đoạn cao trào cuối trang. */
+  danger: {
+    root: "bg-danger text-cream hover:brightness-110",
+    glyph: "bg-cream/20 text-cream",
+    arrow: "border-cream/45 text-cream",
+  },
   /** Nút viền, dùng khi đã có một CTA đặc ở gần. */
   outline: {
     root: "border border-cream/55 text-cream hover:bg-cream/10",

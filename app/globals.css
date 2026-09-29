@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
 /*
- * Pancharm brand tokens — Terracotta (đất nung) + Cream.
- * Nền chủ đạo của trang là `clay`; chữ trên nền đất dùng `cream` (4.6:1).
- * Nội dung chi tiết nằm trong thẻ `cream` với chữ `ink` (12.6:1) và `muted` (5.3:1).
- * `gold` chỉ dùng cho chi tiết nhỏ (sao đánh giá, nét trang trí), không dùng cho chữ.
+ * Pancharm brand tokens — Copper Skillet (PANTONE 20-0058 TPM) + be vàng gần trắng.
+ *
+ * Trang chạy theo nhịp đảo màu: dải nền cam (chữ be sáng) xen kẽ dải nền be
+ * (chữ cam), càng về cuối hành trình càng nóng dần, kết bằng dải `danger`.
+ *
+ * Tương phản (WCAG AA cho chữ thường):
+ *   cream trên clay 4.6:1 · cream trên danger 4.9:1
+ *   clay trên sand 4.6:1 · ink trên sand 12:1 · muted trên sand 5.7:1
+ * `muted` là nâu đậm chứ không phải cam nhạt — cam nhạt trên nền be không đủ đọc.
  */
 @theme {
-  --color-clay: #a55c3c;
-  --color-clay-dark: #8e4a2e;
-  --color-clay-deep: #7a3d24;
-  --color-cream: #fcf4ef;
-  --color-cream-dim: #f3e5d9;
-  --color-ink: #3b2a21;
-  --color-muted: #7b6152;
-  --color-line: #ead9cb;
+  --color-clay: #b95118;
+  --color-clay-dark: #9a3f10;
+  --color-clay-deep: #7a3208;
+  --color-sand: #fbf6ec;
+  --color-cream: #fdf8f0;
+  --color-ink: #4a2a16;
+  --color-muted: #7d5a42;
+  --color-line: #ecdcc8;
+  --color-danger: #c9331a;
   --color-gold: #b08655;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
@@ -33,8 +39,8 @@ html {
 
 body {
   overflow-x: clip;
-  background: var(--color-clay-dark);
-  color: var(--color-cream);
+  background: var(--color-clay-deep);
+  color: var(--color-ink);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
@@ -49,32 +55,62 @@ body {
 @layer components {
   /* Landing chạy cho điện thoại: mọi màn hình đều hiển thị một cột ≤ 480px. */
   .phone-shell {
-    @apply relative mx-auto min-h-dvh w-full max-w-[480px] bg-clay text-cream;
-    box-shadow: 0 20px 60px rgba(58, 32, 18, 0.35);
+    @apply relative mx-auto min-h-dvh w-full max-w-[480px] bg-sand;
+    box-shadow: 0 20px 60px rgba(60, 26, 6, 0.35);
   }
+
+  /*
+   * Ba dải màu của trang. Mỗi dải khai báo sẵn bộ biến cho chữ phụ, nét viền và
+   * mảng nền mờ, nên phần bên trong khối dùng chung một bộ class cho cả ba dải.
+   */
+  .band-clay {
+    @apply bg-clay text-cream;
+    --heading: var(--color-cream);
+    --text-soft: rgba(253, 248, 240, 0.85);
+    --line-soft: rgba(253, 248, 240, 0.35);
+    --fill-soft: rgba(253, 248, 240, 0.1);
+  }
+  .band-sand {
+    @apply bg-sand text-ink;
+    --heading: var(--color-clay);
+    --text-soft: var(--color-muted);
+    --line-soft: rgba(185, 81, 24, 0.3);
+    --fill-soft: rgba(185, 81, 24, 0.07);
+  }
+  .band-danger {
+    @apply bg-danger text-cream;
+    --heading: var(--color-cream);
+    --text-soft: rgba(253, 248, 240, 0.88);
+    --line-soft: rgba(253, 248, 240, 0.4);
+    --fill-soft: rgba(253, 248, 240, 0.12);
+  }
+
   .container-page {
     @apply w-full px-5;
   }
   .section {
     @apply py-11;
   }
-  /* Tiêu đề khu vực: serif, canh giữa theo mockup. */
+  /* Tiêu đề khu vực: serif, canh giữa, màu theo dải đang đứng. */
   .h2 {
     @apply text-center font-serif text-[26px] leading-[1.22] font-semibold;
+    color: var(--heading);
   }
   .lead {
-    @apply mx-auto mt-3 max-w-[34ch] text-center text-[14px] leading-relaxed text-cream/85;
+    @apply mx-auto mt-3 max-w-[34ch] text-center text-[14px] leading-relaxed;
+    color: var(--text-soft);
   }
-  /* Thẻ kem nổi trên nền đất — khối nội dung mặc định của trang. */
+  /* Thẻ nội dung — viền mảnh để vẫn tách khỏi nền be. */
   .card {
-    @apply rounded-[22px] bg-cream text-ink;
+    @apply rounded-[22px] border border-line bg-cream text-ink;
   }
   .soft-shadow {
-    box-shadow: 0 14px 30px -18px rgba(58, 32, 18, 0.55);
+    box-shadow: 0 14px 30px -18px rgba(60, 26, 6, 0.5);
   }
   /* Vòng tròn viền mảnh bao quanh icon, lặp lại nhiều nơi trong mockup. */
   .icon-ring {
-    @apply grid shrink-0 place-items-center rounded-full border border-cream/45;
+    @apply grid shrink-0 place-items-center rounded-full;
+    border: 1px solid var(--line-soft);
   }
   .snap-row {
     @apply -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-2;
