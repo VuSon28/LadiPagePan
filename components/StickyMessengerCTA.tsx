@@ -29,7 +29,7 @@ export function StickyMessengerCTA() {
     <div
       aria-hidden={!show}
       inert={!show}
-      className={`fixed inset-x-0 bottom-0 z-40 mx-auto max-w-[480px] bg-gradient-to-t from-ivory via-ivory/90 to-transparent px-3 pt-4 pb-[calc(10px+env(safe-area-inset-bottom))] transition-transform duration-300 ${
+      className={`fixed inset-x-0 bottom-0 z-40 mx-auto max-w-[480px] bg-gradient-to-t from-clay-deep via-clay-deep/90 to-transparent px-4 pt-6 pb-[calc(10px+env(safe-area-inset-bottom))] transition-transform duration-300 ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
     >

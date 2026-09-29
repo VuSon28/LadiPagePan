@@ -33,18 +33,18 @@ export function OfferCountdown() {
   const parts = remaining === null ? null : split(remaining);
 
   return (
-    <section id="uu-dai" aria-labelledby="offer-title" className="section bg-beige/60">
+    <section id="uu-dai" aria-labelledby="offer-title" className="section">
       <div className="container-page">
         <div className="card soft-shadow px-4 py-6 text-center">
-          <h2 id="offer-title" className="font-serif text-[23px] leading-tight font-semibold text-ink">
+          <h2 id="offer-title" className="font-serif text-[22px] leading-tight font-semibold text-ink">
             {offer.title}
           </h2>
-          <p className="mx-auto mt-2 max-w-[34ch] text-[14px] leading-snug text-muted">{offer.body}</p>
+          <p className="mx-auto mt-2 max-w-[34ch] text-[13.5px] leading-snug text-muted">{offer.body}</p>
 
           <div role="timer" aria-live="off" className="mt-5 grid grid-cols-4 gap-2">
             {offer.units.map((unit, i) => (
               <div key={unit}>
-                <span className="block rounded-xl bg-terracotta py-3 font-sans text-[30px] leading-none font-bold text-white tabular-nums">
+                <span className="block rounded-2xl bg-clay py-3 font-sans text-[28px] leading-none font-bold text-cream tabular-nums">
                   {parts ? String(parts[i]).padStart(2, "0") : "--"}
                 </span>
                 <span className="mt-1.5 block text-[11px] font-semibold tracking-[0.08em] text-muted uppercase">
@@ -54,16 +54,19 @@ export function OfferCountdown() {
             ))}
           </div>
 
-          <MessengerCTA source="offer" label={offer.cta} className="mt-5 w-full" />
+          <MessengerCTA source="offer" label={offer.cta} variant="clay" className="mt-5 w-full" />
         </div>
 
         <ul className="mt-4 grid gap-2">
           {offer.commitments.map((item) => (
-            <li key={item.label} className="card flex items-center gap-3 px-4 py-3">
-              <span className="grid size-9 shrink-0 place-items-center rounded-full bg-terracotta/10 text-terracotta">
-                <Icon name={item.icon} className="size-5" />
+            <li
+              key={item.label}
+              className="flex items-center gap-3 rounded-2xl border border-cream/25 bg-cream/10 px-4 py-3"
+            >
+              <span className="icon-ring size-9 bg-cream/10">
+                <Icon name={item.icon} className="size-5 text-cream" strokeWidth={1.4} />
               </span>
-              <span className="text-[14px] font-semibold text-ink">{item.label}</span>
+              <span className="text-[13.5px] font-medium text-cream">{item.label}</span>
             </li>
           ))}
         </ul>

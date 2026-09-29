@@ -1,25 +1,21 @@
 @import "tailwindcss";
 
 /*
- * Pancharm brand tokens — Ivory + Forest Green + Champagne Gold + Charcoal.
- * `gold` is decorative only (lines, icons, borders): 2.46:1 on ivory.
- * Gold-coloured TEXT uses `gold-deep` (≥4.7:1 on ivory/beige/white).
- * Terracotta: logo mark + conversion elements (CTA buttons, countdown) with
- * white text (7.1:1). Keep it off body text and decoration.
+ * Pancharm brand tokens — Terracotta (đất nung) + Cream.
+ * Nền chủ đạo của trang là `clay`; chữ trên nền đất dùng `cream` (4.6:1).
+ * Nội dung chi tiết nằm trong thẻ `cream` với chữ `ink` (12.6:1) và `muted` (5.3:1).
+ * `gold` chỉ dùng cho chi tiết nhỏ (sao đánh giá, nét trang trí), không dùng cho chữ.
  */
 @theme {
-  --color-ivory: #f8f5ef;
-  --color-beige: #efe9de;
-  --color-forest: #173d35;
-  --color-forest-dark: #102e28;
-  --color-mint: #dce9e0;
-  --color-ink: #242522;
-  --color-muted: #64655f;
-  --color-gold: #b89a63;
-  --color-gold-deep: #7f6130;
-  --color-line: #ded8ce;
-  --color-terracotta: #ac5444;
-  --color-terracotta-dark: #8f4336;
+  --color-clay: #a55c3c;
+  --color-clay-dark: #8e4a2e;
+  --color-clay-deep: #7a3d24;
+  --color-cream: #fcf4ef;
+  --color-cream-dim: #f3e5d9;
+  --color-ink: #3b2a21;
+  --color-muted: #7b6152;
+  --color-line: #ead9cb;
+  --color-gold: #b08655;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
@@ -37,42 +33,48 @@ html {
 
 body {
   overflow-x: clip;
-  background: var(--color-beige);
-  color: var(--color-ink);
+  background: var(--color-clay-dark);
+  color: var(--color-cream);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-forest);
+  outline: 2px solid currentColor;
   outline-offset: 3px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 @layer components {
   /* Landing chạy cho điện thoại: mọi màn hình đều hiển thị một cột ≤ 480px. */
   .phone-shell {
-    @apply relative mx-auto min-h-dvh w-full max-w-[480px] bg-ivory;
-    box-shadow: 0 0 0 1px var(--color-line), 0 20px 60px rgba(36, 37, 34, 0.08);
+    @apply relative mx-auto min-h-dvh w-full max-w-[480px] bg-clay text-cream;
+    box-shadow: 0 20px 60px rgba(58, 32, 18, 0.35);
   }
   .container-page {
     @apply w-full px-5;
   }
   .section {
-    @apply py-10;
+    @apply py-11;
   }
+  /* Tiêu đề khu vực: serif, canh giữa theo mockup. */
   .h2 {
-    @apply font-serif text-[25px] leading-[1.25] font-semibold text-ink;
+    @apply text-center font-serif text-[26px] leading-[1.22] font-semibold;
   }
   .lead {
-    @apply text-[15px] leading-relaxed text-muted;
+    @apply mx-auto mt-3 max-w-[34ch] text-center text-[14px] leading-relaxed text-cream/85;
   }
+  /* Thẻ kem nổi trên nền đất — khối nội dung mặc định của trang. */
   .card {
-    @apply rounded-2xl border border-line bg-white;
+    @apply rounded-[22px] bg-cream text-ink;
   }
   .soft-shadow {
-    box-shadow: 0 8px 24px -12px rgba(23, 61, 53, 0.18);
+    box-shadow: 0 14px 30px -18px rgba(58, 32, 18, 0.55);
+  }
+  /* Vòng tròn viền mảnh bao quanh icon, lặp lại nhiều nơi trong mockup. */
+  .icon-ring {
+    @apply grid shrink-0 place-items-center rounded-full border border-cream/45;
   }
   .snap-row {
     @apply -mx-5 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-2;

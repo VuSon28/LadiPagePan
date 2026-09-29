@@ -3,7 +3,9 @@
 Landing page mobile-first cho funnel **TikTok Ads → Landing → Messenger → Tư vấn Bát Tự**, dựng theo `01_Pancharm_Landing_PreCode_Spec_v1.docx`.
 
 - Next.js 16 (App Router, Turbopack) + Tailwind CSS v4
-- Bố cục theo mockup đã duyệt (hero ảnh tràn nền, dải 4 cam kết, sơ đồ Bát Tự, quy trình 2×2, thẻ ý nghĩa, lưới ảnh 3×2, 3 chứng thư DOJILAB, 5 đặc quyền, feedback, FAQ, CTA cuối nền xanh). Phần Chuyên gia (`ExpertSection`) đang tạm ẩn trong `app/page.tsx`.
+- Bảng màu: nền đất nung (`clay`) chạy suốt trang, nội dung nằm trong thẻ kem (`cream`). Khối kiểm định là dải nền kem để đổi nhịp.
+- Thứ tự khối theo mockup: hero ảnh tràn viền → 4 cam kết → tuyên ngôn “Không chỉ là màu hợp mệnh” → quy trình 4 bước dạng timeline + CTA → sơ đồ Bát Tự → 3 thiết kế tiêu biểu (bấm để xem toàn bộ) → ảnh tràn viền + thư viện + “Thiết kế theo mong muốn” → kiểm định DOJILAB → băng đánh giá vuốt ngang → đặc quyền → ưu đãi đếm ngược → FAQ → CTA cuối kèm 3 số liệu. Phần Chuyên gia (`ExpertSection`) đang tạm ẩn trong `app/page.tsx`.
+- Hai khối **đặc quyền** và **ưu đãi đếm ngược** không có trong mockup nhưng được giữ lại; bỏ đi thì xoá dòng tương ứng trong `app/page.tsx`.
 - Font: Lora (tiêu đề, serif) + Be Vietnam Pro (nội dung)
 - Chỉ có bố cục điện thoại: mọi màn hình (kể cả máy tính) đều hiển thị một cột rộng tối đa 480px, căn giữa (`.phone-shell` trong `app/globals.css`)
 - Không có form, không backend, không database
@@ -32,7 +34,7 @@ Biến `NEXT_PUBLIC_*` được gắn vào lúc build. Sau khi đổi biến tr�
 
 - **Toàn bộ copy:** `data/content.ts`. Không cần sửa component.
 - **Ảnh:** `public/images/` (hero, designs, certificates, og), định dạng WebP.
-- **Logo:** `public/logo-mark.svg` và `app/icon.svg`. Đây là **bản vẽ lại tạm thời**, cần thay bằng file logo gốc.
+- **Logo:** `public/logo-mark.svg` (trên nền sáng), `public/logo-mark-cream.svg` (bản nét kem dùng trên nền đất) và `app/icon.svg`. Đây là **bản vẽ lại tạm thời**, cần thay bằng file logo gốc.
 - **Màu sắc:** token trong `app/globals.css` (`@theme`).
 
 ## Tracking
@@ -44,6 +46,7 @@ Biến `NEXT_PUBLIC_*` được gắn vào lúc build. Sau khi đổi biến tr�
 | `messenger_click` | GA4 | Như trên, kèm `source`, `section`, `device` |
 | `scroll_25/50/75/90` | GA4 | Khi cuộn tới mốc tương ứng |
 | `certificate_open`, `faq_open` | GA4 | Khi mở chứng thư hoặc câu FAQ |
+| `products_expand`, `reviews_expand` | GA4 | Khi bấm xem thêm thiết kế hoặc xem thêm đánh giá |
 
 Giá trị `source` gồm `hero`, `process`, `benefit`, `final`, `sticky`. Khi bấm CTA, trang gửi event rồi chờ 250ms mới mở Messenger trong cùng tab, cách này ổn định hơn trong trình duyệt nội bộ của TikTok. Không có dữ liệu cá nhân nào của khách được gửi vào pixel hay GA.
 
@@ -73,6 +76,8 @@ Tìm chuỗi `pending` trong `data/content.ts` và `[CẦN BỔ SUNG]` trong th�
 - [ ] Chính sách bảo mật (`app/chinh-sach-bao-mat/page.tsx`) đã được rà soát
 - [ ] Xác nhận đã có **quyền sử dụng** feedback (trích nguyên văn, đã ẩn danh) và ảnh sản phẩm
 - [ ] Nội dung video TikTok khớp với landing (quà, chính sách, giá nếu có)
+- [ ] Số sao trong băng đánh giá: chỉ hiện khi thêm `rating` vào review trong `data/content.ts`. Hiện chưa review nào có `rating` vì các feedback là tin nhắn, không kèm số sao — chỉ thêm khi khách thực sự đánh giá sao.
+- [ ] Xác nhận con số “Hơn 1.000 khách hàng” và “20+ năm kinh nghiệm” dùng trong khối đánh giá và CTA cuối
 
 ## Ghi chú nội dung
 

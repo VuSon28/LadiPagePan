@@ -11,7 +11,9 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={`${overlay ? "absolute inset-x-0 top-0 z-30" : "relative"} container-page flex h-14 items-center justify-between`}>
+    <header
+      className={`${overlay ? "absolute inset-x-0 top-0 z-30" : "relative"} container-page flex h-16 items-center justify-between`}
+    >
       <Link href="/" aria-label="Pancharm – về đầu trang">
         <Logo />
       </Link>
@@ -21,15 +23,15 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         aria-expanded={open}
         aria-controls="site-menu"
         aria-label={open ? "Đóng menu" : "Mở menu"}
-        className="-mr-2 grid size-11 place-items-center rounded-full text-ink"
+        className="-mr-2 grid size-11 place-items-center rounded-full text-cream"
       >
-        <Icon name={open ? "close" : "menu"} className="size-6" />
+        <Icon name={open ? "close" : "menu"} className="size-6" strokeWidth={1.8} />
       </button>
       {open && (
         <nav
           id="site-menu"
           aria-label="Các phần của trang"
-          className="card soft-shadow absolute top-14 right-4 left-4 z-40 p-2"
+          className="card soft-shadow absolute top-16 right-4 left-4 z-40 p-2"
         >
           <ul>
             {nav.map((item) => (
@@ -37,10 +39,10 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-12 items-center justify-between rounded-xl px-4 text-[15px] font-medium hover:bg-ivory"
+                  className="flex min-h-12 items-center justify-between rounded-2xl px-4 text-[15px] font-medium hover:bg-cream-dim"
                 >
                   {item.label}
-                  <Icon name="chevron" className="size-4 text-gold" />
+                  <Icon name="chevron" className="size-4 text-clay" strokeWidth={2} />
                 </a>
               </li>
             ))}

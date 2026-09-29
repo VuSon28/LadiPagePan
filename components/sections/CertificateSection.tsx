@@ -9,6 +9,7 @@ import { Icon } from "../Icon";
 /** Nội dung đang mở trong lightbox: ảnh DOJILAB hoặc chứng thư. */
 type Zoomed = { src: string; alt: string; title: string; lines: string[] };
 
+/** Dải nền kem, tạo nhịp nghỉ giữa các khối nền đất. */
 export function CertificateSection() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [active, setActive] = useState<Zoomed | null>(null);
@@ -20,19 +21,12 @@ export function CertificateSection() {
   }
 
   return (
-    <section id="kiem-dinh" aria-labelledby="cert-title" className="section">
+    <section id="kiem-dinh" aria-labelledby="cert-title" className="section bg-cream text-ink">
       <div className="container-page">
-        <div className="text-center">
-          <div aria-hidden="true" className="flex items-center justify-center gap-3 text-gold">
-            <span className="h-px w-16 bg-gradient-to-r from-transparent to-gold" />
-            <Icon name="lotus" className="size-7" strokeWidth={1.2} />
-            <span className="h-px w-16 bg-gradient-to-l from-transparent to-gold" />
-          </div>
-          <h2 id="cert-title" className="h2 mt-3 text-[27px]">
-            {certificates.title}
-          </h2>
-          <p className="lead mx-auto mt-3 max-w-[36ch]">{certificates.body}</p>
-        </div>
+        <h2 id="cert-title" className="h2 text-ink">
+          {certificates.title}
+        </h2>
+        <p className="lead text-muted">{certificates.body}</p>
 
         <ul className="mt-6 grid grid-cols-2 gap-3">
           {certificates.photos.map((photo) => (
@@ -47,7 +41,7 @@ export function CertificateSection() {
                   )
                 }
                 aria-label={`Phóng to ảnh: ${photo.caption}`}
-                className="card soft-shadow group block h-full w-full overflow-hidden rounded-3xl text-left"
+                className="group block h-full w-full text-left"
               >
                 <Image
                   src={photo.src}
@@ -55,25 +49,16 @@ export function CertificateSection() {
                   width={600}
                   height={800}
                   sizes="(min-width: 480px) 220px, 50vw"
-                  className="aspect-[3/4] w-full object-cover"
+                  className="aspect-[3/4] w-full rounded-2xl object-cover"
                 />
-                <span className="flex items-center gap-2 px-3 py-3">
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-serif text-[14.5px] leading-snug font-medium text-ink">
-                      {photo.caption}
-                    </span>
-                    {photo.credit && <span className="mt-0.5 block text-[11.5px] text-muted">{photo.credit}</span>}
-                  </span>
-                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-beige text-gold-deep transition-colors group-hover:bg-gold/30">
-                    <Icon name="chevron" className="size-4" strokeWidth={2} />
-                  </span>
-                </span>
+                <span className="mt-2 block text-[12.5px] leading-snug font-medium text-ink">{photo.caption}</span>
+                {photo.credit && <span className="mt-0.5 block text-[11px] text-muted">{photo.credit}</span>}
               </button>
             </li>
           ))}
         </ul>
 
-        <ul className="mt-4 grid grid-cols-3 gap-2.5">
+        <ul className="mt-5 grid grid-cols-3 gap-2.5">
           {certificates.items.map((cert) => (
             <li key={cert.id}>
               <button
@@ -93,7 +78,7 @@ export function CertificateSection() {
                 className="group block w-full text-left"
                 aria-label={`Phóng to chứng thư ${cert.title}, ${cert.reportNo}`}
               >
-                <span className="card soft-shadow relative block overflow-hidden rounded-2xl p-1.5">
+                <span className="relative block overflow-hidden rounded-2xl border border-line bg-white p-1.5">
                   <Image
                     src={cert.thumb}
                     alt={cert.alt}
@@ -102,14 +87,12 @@ export function CertificateSection() {
                     sizes="(min-width: 480px) 150px, 33vw"
                     className="aspect-[4/3] w-full rounded-xl bg-white object-cover object-left-top"
                   />
-                  <span className="absolute right-2.5 bottom-2.5 grid size-8 place-items-center rounded-full bg-forest text-white shadow-md">
+                  <span className="absolute right-2.5 bottom-2.5 grid size-8 place-items-center rounded-full bg-clay text-cream shadow-md">
                     <Icon name="zoom" className="size-4" />
                   </span>
                 </span>
-                <span className="mt-2 block font-serif text-[14px] leading-tight font-medium text-ink">
-                  {cert.title}
-                </span>
-                <span className="mt-1 block text-[11.5px] leading-tight tracking-wide text-muted uppercase">
+                <span className="mt-2 block text-[11.5px] leading-tight font-medium text-ink">{cert.title}</span>
+                <span className="mt-1 block text-[10.5px] leading-tight tracking-wide text-muted uppercase">
                   {cert.reportNo}
                 </span>
               </button>
@@ -117,8 +100,8 @@ export function CertificateSection() {
           ))}
         </ul>
 
-        <p className="card mt-5 flex items-center gap-3 rounded-2xl bg-ivory px-4 py-3.5 text-[13px] leading-snug text-muted">
-          <span className="grid size-10 shrink-0 place-items-center rounded-full border border-gold/60 bg-white text-gold-deep">
+        <p className="mt-5 flex items-center gap-3 rounded-2xl bg-cream-dim px-4 py-3.5 text-[12.5px] leading-snug text-muted">
+          <span className="grid size-10 shrink-0 place-items-center rounded-full border border-line bg-white text-clay">
             <Icon name="shield" className="size-5" />
           </span>
           <span>
@@ -127,7 +110,7 @@ export function CertificateSection() {
               href={certificates.noteLink.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-gold-deep underline-offset-4 hover:underline"
+              className="font-semibold text-clay underline-offset-4 hover:underline"
             >
               {certificates.noteLink.label}
             </a>
@@ -156,7 +139,7 @@ export function CertificateSection() {
             {/* Ảnh gốc chỉ tải khi mở lightbox. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={active.src} alt={active.alt} className="h-auto max-h-[75dvh] w-full object-contain" />
-            <div className="border-t border-line px-4 py-3 text-sm">
+            <div className="border-t border-line px-4 py-3 text-sm text-ink">
               <p className="font-semibold">{active.title}</p>
               {active.lines.map((line, i) => (
                 <p key={line} className={i === 0 ? "text-muted" : "mt-1 text-muted italic"}>

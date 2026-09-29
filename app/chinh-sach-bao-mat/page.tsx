@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <Pending className="mt-5">
           Bản nháp. Cần bổ sung tên đơn vị sở hữu, thông tin liên hệ và được Pancharm rà soát trước khi publish.
         </Pending>
-        <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-ink [&_h2]:font-serif [&_h2]:text-lg [&_h2]:font-semibold">
+        <div className="mt-8 space-y-6 text-[15px] leading-relaxed text-cream/90 [&_h2]:font-serif [&_h2]:text-lg [&_h2]:font-semibold">
           <section>
             <h2>1. Trang này thu thập thông tin gì?</h2>
             <p className="mt-2">
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             <Pending className="mt-2">Tên pháp nhân, địa chỉ, email/hotline để tiếp nhận yêu cầu về dữ liệu cá nhân.</Pending>
           </section>
         </div>
-        <Link href="/" className="mt-10 inline-block font-semibold text-forest underline underline-offset-4">
+        <Link href="/" className="mt-10 inline-block font-semibold text-cream underline underline-offset-4">
           ← Về trang chủ
         </Link>
       </main>

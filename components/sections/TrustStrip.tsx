@@ -3,14 +3,16 @@ import { Icon } from "../Icon";
 
 export function TrustStrip() {
   return (
-    <section aria-label="Cam kết của Pancharm" className="relative z-10 -mt-8 px-4">
-      <ul className="card soft-shadow grid grid-cols-2 divide-line p-1 [&>li:nth-child(-n+2)]:border-b [&>li:nth-child(odd)]:border-r [&>li]:border-line">
+    <section aria-label="Cam kết của Pancharm" className="border-b border-cream/15 pb-9">
+      <ul className="container-page grid grid-cols-4 gap-2">
         {trustItems.map((item) => (
-          <li key={item.label} className="flex items-center gap-2.5 px-3 py-3">
-            <span className="grid size-9 shrink-0 place-items-center rounded-full border border-gold/70 text-gold-deep">
-              <Icon name={item.icon} className="size-[18px]" />
+          <li key={item.label} className="flex flex-col items-center text-center">
+            <span className="icon-ring size-12">
+              <Icon name={item.icon} className="size-[22px] text-cream" strokeWidth={1.3} />
             </span>
-            <span className="text-[13px] leading-snug font-medium text-ink">{item.label}</span>
+            <span className="mt-2.5 text-[12px] leading-[1.35] font-medium whitespace-pre-line text-cream/90">
+              {item.label}
+            </span>
           </li>
         ))}
       </ul>

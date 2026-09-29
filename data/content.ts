@@ -17,16 +17,9 @@ export const nav = [
 
 export const hero = {
   eyebrow: "Vòng đá phong thủy cá nhân hóa",
-  title: "Một chiếc vòng được thiết kế riêng theo sinh nhật và ước muốn của bạn",
-  body: "Sống thuận mệnh là chìa khoá hoá giải vận hạn, khó khăn.",
-  offer: {
-    label: "Tặng ngay lá số và luận giải trị giá",
-    oldPrice: "500.000đ",
-    newPrice: "0đ",
-    suffix: "ngay hôm nay",
-  },
-  cta: "Nhắn Pancharm – Tư vấn Bát Tự miễn phí",
-  microcopy: ["Miễn phí luận Bát Tự", "Không cần điền form"],
+  title: "Một chiếc vòng được thiết kế riêng theo sinh nhật và mong muốn của bạn",
+  body: "Pancharm kết hợp Bát Tự – Ngũ Hành cùng đá quý tự nhiên, tạo nên chiếc vòng hài hòa năng lượng, đồng hành cùng bạn trên hành trình cuộc sống.",
+  cta: "Nhận tư vấn Bát Tự miễn phí",
   image: {
     src: "/images/hero/hero-pancharm-mobile.webp",
     alt: "Cận cảnh cổ tay đeo ba chuỗi vòng hạt đá màu xanh ngọc phối hạt vàng nhạt, nền lá xanh",
@@ -34,71 +27,100 @@ export const hero = {
 };
 
 export const trustItems = [
-  { icon: "yinyang", label: "Chuyên gia phong thuỷ 20+ năm kinh nghiệm" },
-  { icon: "gem", label: "Cam kết đá/ngọc tự nhiên" },
-  { icon: "bracelet", label: "Mỗi chiếc vòng là độc bản" },
-  { icon: "shield", label: "Bảo hành 1 năm" },
+  { icon: "yinyang", label: "20+ năm\nkinh nghiệm" },
+  { icon: "gem", label: "Đá ngọc\ntự nhiên" },
+  { icon: "pen", label: "Thiết kế\nđộc bản" },
+  { icon: "bell", label: "Bảo hành\n1 năm" },
 ];
 
+/** Khối tuyên ngôn giữa hero và quy trình. */
+export const belief = {
+  title: "Không chỉ là “màu hợp mệnh”",
+  subtitle: "Mà là thiết kế từ Bát Tự của riêng bạn",
+  body: "Mỗi người có một lá số Bát Tự khác nhau. Pancharm phân tích ngũ hành vượng/khuyết để tư vấn loại đá, phối màu và thiết kế phù hợp với mong muốn của bạn.",
+};
+
 export const insight = {
-  title: "Có phải bạn đang chọn vòng hợp mệnh hay mệnh khuyết?",
-  body: "10 người mệnh Hoả nhưng có 10 tính cách khác nhau, vậy có thể đeo cùng 1 loại đá không?",
-  detail:
-    "Pancharm xem xét đầy đủ ngày, tháng, năm, giờ sinh (Bát Tự) để xác định ngũ hành vượng – khuyết, kết hợp với mục tiêu của bạn để tìm ra loại đá và tỷ lệ phối phù hợp.",
-  inputs: ["Giờ sinh", "Ngày sinh", "Tháng sinh", "Năm sinh"],
+  title: "Sinh nhật của bạn tiết lộ điều gì?",
+  body: "Từ 4 yếu tố ngày sinh, chúng tôi phân tích Bát Tự để xác định ngũ hành vượng/khuyết, từ đó tư vấn loại đá và thiết kế phù hợp.",
+  inputs: [
+    { label: "Giờ sinh", sub: "(Thời)", icon: "clock" },
+    { label: "Ngày sinh", sub: "(Nhật)", icon: "sun" },
+    { label: "Tháng sinh", sub: "(Nguyệt)", icon: "moon" },
+    { label: "Năm sinh", sub: "(Niên)", icon: "leaf" },
+  ],
   core: "Bát Tự",
   result: "Ngũ hành vượng / khuyết",
-  goal: "Mục tiêu mong muốn",
-  outcome: "Tìm ra chính xác tỷ lệ bạn cần bổ sung",
+  elements: [
+    { label: "Mộc", icon: "leaf" },
+    { label: "Hỏa", icon: "flame" },
+    { label: "Thổ", icon: "mountain" },
+    { label: "Kim", icon: "metal" },
+    { label: "Thủy", icon: "drop" },
+  ],
+  outcome: "Kết hợp cùng mong muốn của bạn để tìm ra tỷ lệ đá cần bổ sung.",
 };
 
 export const process = {
-  title: "Một chiếc vòng bắt đầu từ Bát Tự của bạn",
+  title: "Quy trình thiết kế vòng\ncá nhân hóa",
   steps: [
     {
       icon: "note",
-      title: "Cung cấp ngày, tháng, năm và giờ sinh",
-      body: "Chia sẻ thông tin Bát Tự của bạn với Pancharm qua Messenger.",
+      title: "Cung cấp thông tin",
+      body: "Ngày, tháng, năm, giờ sinh và mong muốn (công việc, tài chính, tình cảm…)",
     },
     {
       icon: "yinyang",
-      title: "Pancharm luận Bát Tự và xác định ngũ hành vượng – khuyết",
-      body: "Phân tích lá số, xác định ngũ hành của bạn.",
+      title: "Chuyên gia phân tích Bát Tự",
+      body: "Phân tích ngũ hành vượng/khuyết, đưa ra định hướng phù hợp",
     },
     {
-      icon: "crystal",
-      title: "Tư vấn loại đá và cách phối phù hợp với mong muốn",
-      body: "Gợi ý loại đá, màu sắc và tỷ lệ phối cho riêng bạn.",
+      icon: "pen",
+      title: "Tư vấn & thiết kế vòng",
+      body: "Lựa chọn loại đá, màu sắc, charm phù hợp với năng lượng của bạn",
     },
     {
       icon: "bracelet",
-      title: "Thiết kế và hoàn thiện chiếc vòng dành riêng cho bạn",
-      body: "Gửi phương án thiết kế để bạn duyệt trước khi chế tác.",
+      title: "Chế tác & gửi đến bạn",
+      body: "Hoàn thiện thủ công, kiểm định chất lượng và bàn giao",
     },
   ],
-  cta: "Nhận tư vấn Bát Tự miễn phí",
+  ctaCard: {
+    title: "Tư vấn Bát Tự hoàn toàn miễn phí",
+    body: "cùng chuyên gia 20+ năm kinh nghiệm",
+    cta: "Nhận tư vấn ngay",
+  },
 };
 
+/** Nhóm mong muốn, hiển thị thành chip trong khối “Thiết kế theo mong muốn”. */
 export const meaning = {
-  title: "Mỗi chiếc vòng có thể mang một ý nghĩa đồng hành riêng",
-  body: "Tùy theo mong muốn của bạn, Pancharm tư vấn loại đá và thiết kế phù hợp với ý nghĩa phong thủy tương ứng, như một người bạn đồng hành trong cuộc sống.",
   items: [
     { icon: "briefcase", title: "Công việc", body: "Gợi nhắc sự tập trung và vững vàng trên con đường bạn đi." },
     { icon: "coins", title: "Tài chính", body: "Theo quan niệm phong thủy, tượng trưng cho tích lũy và cân bằng." },
     { icon: "heart", title: "Tình cảm", body: "Biểu tượng của sự dịu dàng, kết nối và trân trọng." },
     { icon: "lotus", title: "Bình an", body: "Vật nhỏ đồng hành, nhắc bạn chậm lại và giữ tâm an yên." },
-    { icon: "sprout", title: "Học tập & phát triển bản thân", body: "Gợi nhắc tinh thần học hỏi và trưởng thành mỗi ngày." },
+    { icon: "sprout", title: "Học tập", body: "Gợi nhắc tinh thần học hỏi và trưởng thành mỗi ngày." },
   ],
   disclaimer:
     "Mỗi thiết kế được lựa chọn dựa trên mong muốn của khách hàng và ý nghĩa phong thủy tương ứng, không phải cam kết về kết quả cụ thể.",
 };
 
-export type Product = { name: string; collection: string; price: number; image: string; alt: string };
+export type Product = {
+  name: string;
+  collection: string;
+  detail: string;
+  price: number;
+  image: string;
+  alt: string;
+  featured?: boolean;
+};
 
 /** Giá niêm yết lấy từ pancharm.vn (09/2026). Tỷ lệ đá thực tế được phối lại theo Bát Tự từng người. */
 export const products = {
-  title: "Các mẫu vòng Pancharm theo phân khúc",
-  body: "Giá tham khảo theo mẫu. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",
+  title: "Một số thiết kế tiêu biểu",
+  body: "Mỗi chiếc vòng là một bản thiết kế riêng, phù hợp với năng lượng và mong muốn của từng khách hàng.",
+  moreLabel: "Xem thêm nhiều thiết kế khác",
+  lessLabel: "Thu gọn danh sách",
   segments: [
     {
       label: "Dưới 1,3 triệu",
@@ -106,13 +128,16 @@ export const products = {
         {
           name: "Vô Vi Phỉ Thúy Lam",
           collection: "BST Vô Vi · Bạc",
+          detail: "Phỉ thúy lam phối hạt hồng, vàng",
           price: 1155000,
           image: "/images/products/vo-vi-phi-thuy-lam.webp",
           alt: "Vòng Vô Vi Phỉ Thúy Lam hạt hồng, vàng và xanh có charm bạc",
+          featured: true,
         },
         {
           name: "Thiên Vi Phỉ Thúy Lam",
           collection: "BST Thiên Vi · Bạc",
+          detail: "Phỉ thúy lam xanh, charm bạc",
           price: 1199000,
           image: "/images/products/thien-vi-phi-thuy-lam.webp",
           alt: "Bàn tay cầm vòng Thiên Vi phối ngọc phỉ thúy lam xanh, hạt hồng và vàng",
@@ -120,6 +145,7 @@ export const products = {
         {
           name: "Vô Vi Phỉ Thúy Huyết",
           collection: "BST Vô Vi · Bạc",
+          detail: "Phỉ thúy huyết đỏ cam, hạt hồng",
           price: 1205000,
           image: "/images/products/vo-vi-phi-thuy-huyet.webp",
           alt: "Vòng Vô Vi Phỉ Thúy Huyết hạt đỏ cam, hồng và bạc có charm",
@@ -127,6 +153,7 @@ export const products = {
         {
           name: "Thiên Vi Phỉ Thúy Huyết",
           collection: "BST Thiên Vi · Bạc",
+          detail: "Phỉ thúy huyết phối hạt vàng",
           price: 1299000,
           image: "/images/products/thien-vi-phi-thuy-huyet.webp",
           alt: "Bàn tay cầm vòng Thiên Vi phối ngọc phỉ thúy huyết đỏ cam và hạt vàng",
@@ -137,8 +164,9 @@ export const products = {
       label: "1,3 – 1,8 triệu",
       items: [
         {
-          name: "Thiên Vi Ngũ Hành full đá tròn 6 ly",
+          name: "Thiên Vi Ngũ Hành 6 ly",
           collection: "BST Thiên Vi · Bạc",
+          detail: "Full đá tròn 6 ly, đủ ngũ hành",
           price: 1399000,
           image: "/images/products/thien-vi-ngu-hanh-6ly.webp",
           alt: "Bàn tay cầm vòng đá tròn 6 ly phối hạt hồng, vàng và xám",
@@ -146,13 +174,16 @@ export const products = {
         {
           name: "Trà An",
           collection: "BST Trà An · Bạc",
+          detail: "Hoa ngọc xanh chạm khắc thủ công",
           price: 1521000,
           image: "/images/products/tra-an.webp",
           alt: "Cổ tay đeo vòng Trà An có hoa ngọc xanh chạm khắc",
+          featured: true,
         },
         {
           name: "Thiên Vi Mix Lu Thống",
           collection: "BST Thiên Vi · Bạc",
+          detail: "Lu thống san hô cam",
           price: 1699000,
           image: "/images/products/thien-vi-lu-thong.webp",
           alt: "Bàn tay cầm vòng Thiên Vi có lu thống san hô cam",
@@ -163,35 +194,47 @@ export const products = {
       label: "Trên 1,8 triệu",
       items: [
         {
-          name: "Phỉ thúy Miến Điện mix thạch anh dâu tây 6 ly",
+          name: "Phỉ Thúy Miến Điện 6 ly",
           collection: "Bạc",
+          detail: "Mix thạch anh dâu tây",
           price: 1825000,
           image: "/images/products/phi-thuy-mien-dien-dau-tay.webp",
           alt: "Vòng phỉ thúy Miến Điện xanh nhạt phối một hạt thạch anh dâu tây",
         },
         {
-          name: "Lam ngọc hoa trà tì hưu 8 ly",
+          name: "Lam Ngọc Hoa Trà 8 ly",
           collection: "Bạc",
+          detail: "Tì hưu và hoa trà ngọc chạm khắc",
           price: 1825000,
           image: "/images/products/lam-ngoc-hoa-tra-ti-huu.webp",
           alt: "Vòng lam ngọc 8 ly có tì hưu xanh đậm và hoa trà ngọc",
         },
         {
-          name: "Thiên Vi full đá tròn 8 ly Tì Hưu",
+          name: "Thiên Vi Tì Hưu 8 ly",
           collection: "BST Thiên Vi · Bạc",
+          detail: "Full đá tròn 8 ly, tì hưu ngọc",
           price: 2315000,
           image: "/images/products/thien-vi-ti-huu-8ly.webp",
           alt: "Vòng Thiên Vi đá tròn 8 ly có tì hưu ngọc xanh",
+          featured: true,
         },
       ],
     },
   ] satisfies { label: string; items: Product[] }[],
+  note: "Giá tham khảo theo mẫu. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",
 };
 
-export const collection = {
-  title: "Ảnh thật từ Pancharm",
-  body: "Mỗi chiếc vòng là một thiết kế được phối riêng theo Bát Tự và mong muốn của người đeo.",
-  items: [
+/** Khối “Thiết kế theo mong muốn của riêng bạn”: ảnh tràn viền + chip mong muốn + thư viện ảnh thật. */
+export const design = {
+  band: {
+    src: "/images/hero/final-pancharm-01.webp",
+    alt: "Lòng bàn tay cầm vòng hạt ngọc xanh đậm phối charm ngọc trắng, nền lá cây",
+  },
+  title: "Thiết kế theo mong muốn\ncủa riêng bạn",
+  body: "Từ màu sắc, loại đá đến charm, tất cả đều được chọn lựa và chế tác riêng theo năng lượng và câu chuyện của bạn.",
+  cta: "Nhận tư vấn thiết kế vòng",
+  galleryTitle: "Ảnh thật từ Pancharm",
+  gallery: [
     { src: "/images/designs/design-08.webp", alt: "Bàn tay cầm vòng hạt hồng và vàng có mặt đá xanh đậm chạm khắc" },
     { src: "/images/designs/design-03.webp", alt: "Cổ tay đeo nhiều vòng hạt xanh ngọc và hạt hồng, vàng" },
     { src: "/images/designs/design-04.webp", alt: "Lòng bàn tay cầm vòng hạt trắng sữa có charm bạc" },
@@ -295,6 +338,8 @@ export const expert = {
 };
 
 export type Review = {
+  /** Số sao nếu khách có gửi đánh giá kèm sao; để trống thì không hiển thị sao. */
+  rating?: number;
   /** Tên đã che kiểu sàn TMĐT (chữ đầu + *** + chữ cuối) — không đăng tên thật. */
   name: string;
   meta: string;
@@ -307,9 +352,10 @@ export type Review = {
  * "…" = lược bớt). Không thêm, không bịa đánh giá; muốn thêm phải có ảnh gốc.
  */
 export const testimonials = {
-  title: "Hằng năm, Pancharm nhận được rất nhiều tin vui từ các khách hàng thân thiết",
+  title: "Khách hàng nói về Pancharm",
+  subtitle: "Hơn 1.000 khách hàng đã lựa chọn và tin tưởng",
   note: "Trích nguyên văn tin nhắn khách hàng gửi Pancharm, đã ẩn tên. Đây là cảm nhận cá nhân của từng khách hàng, không phải cam kết về kết quả.",
-  initialCount: 4,
+  initialCount: 6,
   items: [
     {
       name: "T***n",
@@ -447,6 +493,8 @@ export const offer = {
 
 export const faq = {
   title: "Câu hỏi thường gặp",
+  moreLabel: "Xem tất cả",
+  initialCount: 5,
   items: [
     {
       id: "gio-sinh",
@@ -483,10 +531,14 @@ export const faq = {
 };
 
 export const finalCta = {
-  title: "Sẵn sàng tìm chiếc vòng dành riêng cho bạn?",
+  title: "Bắt đầu hành trình cân bằng\nnăng lượng của riêng bạn",
   body: "Nhắn Pancharm để được tư vấn Bát Tự miễn phí và lựa chọn thiết kế phù hợp với mong muốn của bạn.",
-  cta: "Nhắn Messenger ngay",
-  image: "/images/hero/final-pancharm-01.webp",
+  cta: "Nhận tư vấn Bát Tự miễn phí",
+  stats: [
+    { icon: "users", value: "1.000+", label: "Khách hàng tin tưởng" },
+    { icon: "yinyang", value: "20+ năm", label: "Kinh nghiệm" },
+    { icon: "shield", value: "100%", label: "Đá tự nhiên có kiểm định" },
+  ],
 };
 
 export const sticky = { cta: "Nhắn Pancharm – Tư vấn miễn phí" };

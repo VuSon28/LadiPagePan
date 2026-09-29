@@ -1,25 +1,34 @@
-import Image from "next/image";
 import { finalCta } from "@/data/content";
+import { Icon } from "../Icon";
 import { MessengerCTA } from "../MessengerCTA";
 
 export function FinalCTA() {
   return (
-    <section aria-labelledby="final-title" className="relative isolate overflow-hidden bg-forest py-12 text-center">
-      <Image
-        src={finalCta.image}
-        alt=""
-        fill
-        sizes="(min-width: 480px) 480px, 100vw"
-        className="-z-20 object-cover opacity-40"
-      />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(23,61,53,0.92)_35%,rgba(23,61,53,0.7)_100%)]" />
+    <section aria-labelledby="final-title" className="bg-clay-dark py-12 text-center">
       <div className="container-page">
-        <h2 id="final-title" className="mx-auto max-w-[18ch] font-serif text-[26px] leading-[1.25] font-semibold text-white">
+        <h2
+          id="final-title"
+          className="mx-auto max-w-[20ch] font-serif text-[25px] leading-[1.25] font-semibold whitespace-pre-line text-cream"
+        >
           {finalCta.title}
         </h2>
-        <p className="mx-auto mt-3 max-w-[34ch] text-[15px] leading-relaxed text-ivory/85">{finalCta.body}</p>
+
+        <ul className="mt-7 flex items-start justify-center gap-4">
+          {finalCta.stats.map((stat) => (
+            <li key={stat.label} className="flex w-[30%] flex-col items-center">
+              <span className="icon-ring size-14 bg-cream/10">
+                <Icon name={stat.icon} className="size-6 text-cream" strokeWidth={1.3} />
+              </span>
+              <span className="mt-2.5 font-serif text-[19px] leading-none font-semibold text-cream">{stat.value}</span>
+              <span className="mt-1.5 text-[11.5px] leading-snug text-cream/80">{stat.label}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mx-auto mt-6 max-w-[34ch] text-[13.5px] leading-relaxed text-cream/85">{finalCta.body}</p>
+
         <div className="mt-6 flex justify-center">
-          <MessengerCTA id="final-cta" source="final" label={finalCta.cta} className="w-auto min-w-[240px]" />
+          <MessengerCTA id="final-cta" source="final" label={finalCta.cta} />
         </div>
       </div>
     </section>
