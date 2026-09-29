@@ -56,10 +56,26 @@ export const belief = {
 };
 
 export const insight = {
-  title: "Có phải bạn đang chọn vòng hợp mệnh hay mệnh khuyết?",
+  /** `em` = cụm nhấn mạnh (đậm, nổi, nhấp nháy). */
+  title: [
+    { text: "Có phải bạn đang chọn vòng " },
+    { text: "hợp mệnh", em: true },
+    { text: " hay " },
+    { text: "mệnh khuyết", em: true },
+    { text: "?" },
+  ] as { text: string; em?: boolean }[],
   body: "10 người mệnh Hoả nhưng có 10 tính cách khác nhau, vậy có thể đeo cùng 1 loại đá không?",
-  detail:
-    "Pancharm xem xét đầy đủ ngày, tháng, năm, giờ sinh (Bát Tự) để xác định ngũ hành vượng – khuyết, kết hợp với mục tiêu của bạn để tìm ra loại đá và tỷ lệ phối phù hợp.",
+  diagramTitle: "Vậy 1 chiếc vòng Pancharm được tạo ra thế nào?",
+  designImage: {
+    src: "/images/bat-tu/thiet-ke-thien-vi-ti-huu.webp",
+    alt: "Vòng Thiên Vi full đá tròn 8 ly Tì Hưu: hạt thạch anh hồng, vàng, moonstone phối tì hưu ngọc xanh",
+    caption: "Thiết kế thực tế: Thiên Vi full đá tròn 8 ly Tì Hưu",
+  },
+  meaningImage: {
+    src: "/images/bat-tu/y-nghia-thien-vi-ti-huu.webp",
+    alt: "Ý nghĩa từng loại đá trong vòng: Ngọc Phỉ Thuý bình an thuận lợi; Hắc Nguyệt Quang trợ Mộc; Thạch anh hồng trợ Hoả – Thổ; Moonstone trợ Thuỷ; Thạch anh vàng trợ Kim; viên chủ chọn theo mong ước lớn nhất; tì hưu chiêu tài giữ lộc; charm cỏ may mắn và đồng xu tiền tài",
+    caption: "Mỗi viên đá trong vòng đều có vai trò riêng",
+  },
   inputs: [
     { label: "Giờ sinh", sub: "(Thời)", icon: "clock" },
     { label: "Ngày sinh", sub: "(Nhật)", icon: "sun" },
