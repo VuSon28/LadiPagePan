@@ -1,12 +1,10 @@
 import Image from "next/image";
-import { design, meaning } from "@/data/content";
-import { Icon } from "../Icon";
-import { MessengerCTA } from "../MessengerCTA";
+import { design } from "@/data/content";
 
-/** Ảnh tràn viền + thư viện ảnh khách gửi về + khối “Thiết kế theo mong muốn của riêng bạn”. */
+/** Ảnh tràn viền + thư viện ảnh khách gửi về. Khối “Thiết kế theo mong muốn” đã bỏ theo yêu cầu (nội dung vẫn trong content.ts). */
 export function CollectionShowcase() {
   return (
-    <section id="thiet-ke" aria-labelledby="design-title" className="band-sand">
+    <section id="thiet-ke" aria-labelledby="gallery-title" className="band-pine">
       <Image
         src={design.band.src}
         alt={design.band.alt}
@@ -16,10 +14,10 @@ export function CollectionShowcase() {
         className="aspect-[4/3] w-full object-cover object-center"
       />
 
-      <div className="band-pine container-page py-9">
-        <h3 className="text-center font-serif text-[24px] leading-snug font-bold text-rosewood">
+      <div className="container-page py-9">
+        <h2 id="gallery-title" className="text-center font-serif text-[24px] leading-snug font-bold text-rosewood">
           {design.galleryTitle}
-        </h3>
+        </h2>
         <ul className="mt-4 grid grid-cols-3 gap-2">
           {design.gallery.map((item) => (
             <li key={item.src}>
@@ -34,31 +32,6 @@ export function CollectionShowcase() {
             </li>
           ))}
         </ul>
-      </div>
-
-      <div className="container-page py-10 text-center">
-        <h2 id="design-title" className="h2 whitespace-pre-line">
-          {design.title}
-        </h2>
-        <p className="lead">{design.body}</p>
-
-        <ul className="mt-5 flex flex-wrap justify-center gap-2">
-          {meaning.items.map((item) => (
-            <li
-              key={item.title}
-              className="flex items-center gap-1.5 rounded-full border border-[var(--line-soft)] bg-[var(--fill-soft)] px-3 py-1.5 text-[13px] font-medium text-clay"
-            >
-              <Icon name={item.icon} className="size-4" strokeWidth={1.4} />
-              {item.title}
-            </li>
-          ))}
-        </ul>
-
-        <p className="mx-auto mt-4 max-w-[38ch] text-[12px] leading-snug text-muted italic">{meaning.disclaimer}</p>
-
-        <div className="mt-6 flex justify-center">
-          <MessengerCTA source="benefit" label={design.cta} variant="clay" />
-        </div>
       </div>
     </section>
   );

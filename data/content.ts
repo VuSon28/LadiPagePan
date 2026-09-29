@@ -325,7 +325,7 @@ export type Certificate = {
 };
 
 export const certificates = {
-  title: "Đá & chất liệu có kiểm định",
+  title: "Đá & chất liệu đã kiểm định",
   body: "Pancharm lựa chọn đá và chất liệu có hồ sơ kiểm định áp dụng theo từng mẫu, giúp bạn an tâm hơn khi lựa chọn.",
   photos: [
     {
