@@ -22,6 +22,8 @@
   --color-line: #ecdcc8;
   --color-danger: #c9331a;
   --color-gold: #b08655;
+  /* Vàng mật: chữ nhấn trên nền clay-deep (6.6:1). */
+  --color-honey: #f2d49b;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;

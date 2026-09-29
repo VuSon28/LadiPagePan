@@ -41,12 +41,12 @@ export const hero = {
   },
 };
 
-export const trustItems = [
-  { icon: "yinyang", label: "Chuyên gia phong thuỷ 20+ năm kinh nghiệm" },
-  { icon: "gem", label: "Cam kết đá/ngọc tự nhiên" },
-  { icon: "bracelet", label: "Mỗi chiếc vòng là độc bản" },
-  { icon: "shield", label: "Bảo hành 1 năm" },
-];
+/** Thông điệp tin cậy duy nhất ngay dưới hero. */
+export const trustBadge = {
+  icon: "yinyang",
+  lead: "Chuyên gia phong thuỷ",
+  highlight: "20+ năm kinh nghiệm",
+};
 
 /** Khối tuyên ngôn giữa hero và quy trình. */
 export const belief = {

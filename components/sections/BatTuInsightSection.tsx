@@ -4,7 +4,7 @@ import { SectionHeading } from "../SectionHeading";
 
 export function BatTuInsightSection() {
   return (
-    <section aria-labelledby="insight-title" className="band-sand section pt-3">
+    <section aria-labelledby="insight-title" className="band-sand section">
       <div className="container-page">
         <SectionHeading id="insight-title" title={insight.title} body={insight.body} />
         <p className="mx-auto mt-4 max-w-[38ch] text-center text-[13.5px] leading-relaxed text-muted">
