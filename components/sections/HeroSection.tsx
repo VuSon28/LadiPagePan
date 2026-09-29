@@ -30,8 +30,26 @@ export function HeroSection() {
         <p className="max-w-[22ch] text-[12px] leading-relaxed font-semibold tracking-[0.16em] text-[var(--text-soft)] uppercase">
           {hero.eyebrow}
         </p>
-        <h1 id="hero-title" className="mt-3 max-w-[16ch] font-serif text-[31px] leading-[1.2] font-semibold">
-          {hero.title}
+        {/* Mỗi dòng là một khối không xuống dòng; cỡ chữ theo vw để 3 dòng vừa cả màn 360px. */}
+        <h1 id="hero-title" className="mt-3 font-serif leading-[1.18]">
+          {hero.title.map((line, i) => (
+            <span key={i} className="block whitespace-nowrap">
+              {line.map((part) =>
+                part.em ? (
+                  <strong
+                    key={part.text}
+                    className="animate-blink text-[min(6.4vw,29px)] font-bold"
+                  >
+                    {part.text}
+                  </strong>
+                ) : (
+                  <span key={part.text} className="text-[min(4.7vw,21px)] font-medium">
+                    {part.text}
+                  </span>
+                ),
+              )}
+            </span>
+          ))}
         </h1>
         <p className="mt-4 max-w-[38ch] text-[15px] leading-relaxed">{hero.body}</p>
 
@@ -39,7 +57,8 @@ export function HeroSection() {
         <p className="mt-5 flex items-start gap-2.5 rounded-2xl bg-cream px-3.5 py-3 text-[13.5px] leading-snug text-ink">
           <Icon name="gift" className="mt-0.5 size-5 shrink-0 text-clay" />
           <span>
-            {hero.offer.label} <s className="text-muted decoration-clay decoration-2">{hero.offer.oldPrice}</s>{" "}
+            <strong className="font-bold text-clay">{hero.offer.lead}</strong> {hero.offer.label}{" "}
+            <span className="font-semibold">{hero.offer.value}</span> –{" "}
             <strong className="animate-blink text-[17px] font-bold text-clay">{hero.offer.newPrice}</strong>{" "}
             {hero.offer.suffix}
           </span>

@@ -121,7 +121,7 @@ body {
   }
 }
 
-/* Giá ưu đãi "0đ" nhấp nháy để hút mắt; tắt theo prefers-reduced-motion bên dưới. */
+/* Cụm nhấn trong tiêu đề hero và giá "0đ" nhấp nháy để hút mắt; tắt theo prefers-reduced-motion bên dưới. */
 @keyframes blink {
   0%,
   100% {
@@ -144,5 +144,9 @@ body {
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+  /* Không nhấp nháy: giữ chữ hiện rõ thay vì dừng ở một mức mờ ngẫu nhiên. */
+  .animate-blink {
+    animation: none;
   }
 }

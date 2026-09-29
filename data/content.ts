@@ -17,11 +17,20 @@ export const nav = [
 
 export const hero = {
   eyebrow: "Vòng đá phong thủy cá nhân hóa",
-  title: "Một chiếc vòng được thiết kế riêng theo sinh nhật và ước muốn của bạn",
+  /**
+   * Tiêu đề cố định đúng 3 dòng; `em` = cụm nhấn mạnh (to, đậm, nhấp nháy).
+   * Giữ mỗi dòng ngắn — dòng 3 là dòng dài nhất và phải vừa màn hình 360px.
+   */
+  title: [
+    [{ text: "Một chiếc vòng được" }],
+    [{ text: "thiết kế riêng", em: true }, { text: " theo" }],
+    [{ text: "sinh nhật", em: true }, { text: " và " }, { text: "ước muốn", em: true }, { text: " của bạn" }],
+  ] as { text: string; em?: boolean }[][],
   body: "Sống thuận mệnh là chìa khoá hoá giải vận hạn, khó khăn.",
   offer: {
-    label: "Tặng ngay lá số và luận giải trị giá",
-    oldPrice: "500.000đ",
+    lead: "Tặng",
+    label: "ngay lá số và luận giải trị giá",
+    value: "500.000đ",
     newPrice: "0đ",
     suffix: "ngay hôm nay",
   },
