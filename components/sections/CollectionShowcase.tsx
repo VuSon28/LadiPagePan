@@ -17,7 +17,7 @@ export function CollectionShowcase() {
       />
 
       <div className="band-pine container-page py-9">
-        <h3 className="text-center font-serif text-[22px] leading-snug font-semibold text-[var(--heading)]">
+        <h3 className="text-center font-serif text-[24px] leading-snug font-bold text-rosewood">
           {design.galleryTitle}
         </h3>
         <ul className="mt-4 grid grid-cols-3 gap-2">

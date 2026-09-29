@@ -30,6 +30,8 @@
   --color-blush: #ecc9be;
   /* Thư viện ảnh khách: nền Evergreen #082110 + chữ be hồng (12:1). */
   --color-pine: #082110;
+  /* Rosewood Dust: tiêu đề “Ảnh khách hàng gửi về” trên nền pine (4:1, chỉ dùng cho chữ lớn). */
+  --color-rosewood: #aa6b75;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
