@@ -22,8 +22,9 @@
   --color-line: #ecdcc8;
   --color-danger: #c9331a;
   --color-gold: #b08655;
-  /* Vàng mật: chữ nhấn trên nền clay-deep (6.6:1). */
-  --color-honey: #f2d49b;
+  /* Dải chuyên gia dưới hero: nền xanh mạ + chữ nâu đỏ (4.7:1). */
+  --color-sprout: #c7d42b;
+  --color-brick: #8b2e12;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
