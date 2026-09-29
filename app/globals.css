@@ -25,10 +25,10 @@
   /* Dải chuyên gia dưới hero: nền xanh mạ + chữ nâu đỏ (4.7:1). */
   --color-sprout: #c7d42b;
   --color-brick: #8b2e12;
-  /* Khối mẫu vòng: nền xanh rêu tối + chữ be hồng đỗ (11:1). */
+  /* Thư viện ảnh khách: nền xanh rêu tối + chữ be hồng đỗ (11:1). */
   --color-evergreen: #162c05;
   --color-blush: #ecc9be;
-  /* Rosewood Dust: nền thư viện ảnh khách, tiêu đề xanh rêu đậm (#162C05). */
+  /* Khối mẫu vòng: nền Rosewood Dust + chữ xanh rêu đậm (#162C05). */
   --color-rosewood: #aa6b75;
 
   --font-serif: var(--font-lora), ui-serif, Georgia, serif;
@@ -85,7 +85,7 @@ body {
     --line-soft: rgba(185, 81, 24, 0.3);
     --fill-soft: rgba(185, 81, 24, 0.07);
   }
-  /* Dải xanh rêu tối (#162C05) + chữ be hồng đỗ: khối mẫu vòng theo phân khúc. */
+  /* Dải xanh rêu tối (#162C05) + chữ be hồng đỗ: thư viện ảnh khách gửi về. */
   .band-evergreen {
     @apply bg-evergreen text-blush;
     --heading: var(--color-blush);
@@ -93,10 +93,13 @@ body {
     --line-soft: rgba(236, 201, 190, 0.35);
     --fill-soft: rgba(236, 201, 190, 0.1);
   }
-  /* Dải Rosewood Dust: thư viện ảnh khách gửi về. */
+  /* Dải Rosewood Dust + chữ xanh rêu đậm: khối mẫu vòng. Chữ phụ để đậm hẳn vì nền trung tính. */
   .band-rosewood {
     @apply bg-rosewood text-evergreen;
     --heading: var(--color-evergreen);
+    --text-soft: var(--color-evergreen);
+    --line-soft: rgba(22, 44, 5, 0.35);
+    --fill-soft: rgba(22, 44, 5, 0.08);
   }
   .band-danger {
     @apply bg-danger text-cream;

@@ -3,7 +3,6 @@ import { StickyMessengerCTA } from "@/components/StickyMessengerCTA";
 import { BatTuInsightSection } from "@/components/sections/BatTuInsightSection";
 import { CertificateSection } from "@/components/sections/CertificateSection";
 import { CollectionShowcase } from "@/components/sections/CollectionShowcase";
-import { CustomerGallery } from "@/components/sections/CustomerGallery";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -23,7 +22,6 @@ export default function Home() {
         <HeroSection />
         <TrustStrip />
         <BatTuInsightSection />
-        <CustomerGallery />
         <ProductShowcase />
         <CollectionShowcase />
         <CertificateSection />
