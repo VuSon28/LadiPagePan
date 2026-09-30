@@ -146,6 +146,8 @@ export type Product = {
  * Giá lấy từ "Pancharm giá bán sp [cập nhật 17072026].pdf" (bảng giá nội bộ số 2).
  * Giá đã gồm thuế, áp dụng cổ tay 14–16cm. Phân khúc xếp theo giá bản bạc.
  * Trang KHÔNG hiển thị giá (theo yêu cầu 30/09/2026); giá giữ ở đây để xếp phân khúc.
+ * Mỗi mẫu phải có giá nằm đúng khoảng của nhãn phân khúc. Nhóm 900k–1tr lấy từ trang Diên và
+ * “Vòng full đá tròn cước” (dây cước) của file giá.
  * Thiên Ân: dùng giá chính thức từ 22/07/2026. Ảnh tách từ chính file PDF.
  * Không đưa mã sản phẩm / ghi chú nội bộ lên trang.
  */
@@ -154,34 +156,31 @@ export const products = {
   body: "Mỗi chiếc vòng là một bản thiết kế riêng, phù hợp với năng lượng và mong muốn của từng khách hàng.",
   segments: [
     {
-      label: "Dưới 1 triệu",
+      label: "900k – 1 triệu",
       items: [
         {
-          name: "Thiên Vi ngũ hành 10 đá",
-          price: 499000,
-          fromPrice: 299000,
-          image: "/images/products/thien-vi-ngu-hanh-10-da.webp",
-          alt: "Lắc bạc Thiên Vi 10 viên đá ngũ hành nhiều màu kèm charm cỏ bốn lá",
+          name: "Diên đá charm vô cực",
+          price: 900000,
+          image: "/images/products/dien-da.webp",
+          alt: "Lắc bạc Diên có charm vô cực, hai bên là hạt đá xanh lục và vàng",
         },
         {
-          name: "Thiên Vi ngũ hành full đá tự do",
-          price: 599000,
-          fromPrice: 499000,
-          image: "/images/products/thien-vi-full-da-tu-do.webp",
-          alt: "Vòng Thiên Vi full đá tự do nhiều màu: vàng, xanh, hồng, trắng",
+          name: "Vòng Moonstone tròn 6 ly",
+          price: 900000,
+          image: "/images/products/moonstone-tron.webp",
+          alt: "Tay cầm chuỗi vòng đá mặt trăng Moonstone tròn trắng trong",
         },
         {
-          name: "Trà An ngọc dây chỉ sáp",
-          price: 720000,
-          image: "/images/products/tra-an-ngoc-chi-sap.webp",
-          alt: "Vòng Trà An dây chỉ sáp màu be có hoa trà ngọc và charm chữ cái",
+          name: "Vòng thạch anh dâu tây tròn 8 ly",
+          price: 900000,
+          image: "/images/products/thach-anh-dau-tay-tron.webp",
+          alt: "Vòng thạch anh dâu tây tròn màu hồng đỏ có đốm",
         },
         {
-          name: "Thiên Vi full đá gần tròn",
-          price: 750000,
-          fromPrice: 550000,
-          image: "/images/products/thien-vi-full-da-gan-tron.webp",
-          alt: "Vòng Thiên Vi full đá gần tròn phối hồng, cam, xanh ngọc",
+          name: "Vòng Phỉ Thuý lam bánh xe",
+          price: 1000000,
+          image: "/images/products/phi-thuy-lam-banh-xe.webp",
+          alt: "Tay cầm chuỗi vòng ngọc phỉ thuý lam hình bánh xe màu xanh",
         },
       ],
     },
