@@ -4,8 +4,6 @@ import { Icon } from "../Icon";
 import { MessengerLink } from "../MessengerCTA";
 import { SectionHeading } from "../SectionHeading";
 
-const vnd = new Intl.NumberFormat("vi-VN");
-
 /** Mỗi phân khúc giá là một lưới 2×2; phân khúc thiếu mẫu được bù bằng ô "thiết kế riêng". */
 export function ProductShowcase() {
   return (
@@ -48,11 +46,8 @@ function ProductCard({ item }: { item: Product }) {
         className="aspect-square w-full object-cover"
       />
       <div className="flex flex-1 flex-col px-3 pt-2.5 pb-3">
+        {/* Không hiển thị giá: khách nhắn Pancharm để được báo giá. */}
         <p className="font-serif text-[14.5px] leading-snug font-semibold text-ink">{item.name}</p>
-        <p className="mt-auto pt-1.5 text-[15px] font-bold text-clay">{vnd.format(item.price)}đ</p>
-        {item.fromPrice && (
-          <p className="text-[11.5px] leading-snug text-muted">Titan/cước từ {vnd.format(item.fromPrice)}đ</p>
-        )}
       </div>
     </li>
   );

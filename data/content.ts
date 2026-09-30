@@ -7,8 +7,8 @@
  */
 
 export const nav = [
-  { href: "#mau-vong", label: "Mẫu vòng & giá" },
-  { href: "#thiet-ke", label: "Thiết kế theo mong muốn" },
+  { href: "#mau-vong", label: "Mẫu vòng tiêu biểu" },
+  { href: "#thiet-ke", label: "Ảnh khách hàng gửi về" },
   { href: "#kiem-dinh", label: "Hồ sơ kiểm định" },
   { href: "#danh-gia", label: "Khách hàng nói gì" },
   { href: "#uu-dai", label: "Ưu đãi hôm nay" },
@@ -145,6 +145,7 @@ export type Product = {
 /**
  * Giá lấy từ "Pancharm giá bán sp [cập nhật 17072026].pdf" (bảng giá nội bộ số 2).
  * Giá đã gồm thuế, áp dụng cổ tay 14–16cm. Phân khúc xếp theo giá bản bạc.
+ * Trang KHÔNG hiển thị giá (theo yêu cầu 30/09/2026); giá giữ ở đây để xếp phân khúc.
  * Thiên Ân: dùng giá chính thức từ 22/07/2026. Ảnh tách từ chính file PDF.
  * Không đưa mã sản phẩm / ghi chú nội bộ lên trang.
  */
@@ -185,7 +186,7 @@ export const products = {
       ],
     },
     {
-      label: "1 – 2 triệu",
+      label: "1 – 3 triệu",
       items: [
         {
           name: "Thiên Vi full đá tròn 6 ly",
@@ -201,32 +202,6 @@ export const products = {
           alt: "Vòng Vô Vi phối ngọc trai, ngọc phỉ thuý lam bánh xe và charm trái tim bạc",
         },
         {
-          name: "Trà An ngọc Phỉ Thuý Lam",
-          price: 1550000,
-          fromPrice: 1350000,
-          image: "/images/products/tra-an-phi-thuy-lam.webp",
-          alt: "Vòng Trà An hoa trà ngọc, ngọc phỉ thuý lam và ngọc trai",
-        },
-        {
-          name: "Thiên Vi mix Lu Thống 6 ly",
-          price: 1780000,
-          fromPrice: 1580000,
-          image: "/images/products/thien-vi-lu-thong-6ly.webp",
-          alt: "Vòng Thiên Vi đá tròn 6 ly có một lu thống san hô đỏ ở giữa",
-        },
-      ],
-    },
-    {
-      label: "2 – 3 triệu",
-      items: [
-        {
-          name: "Ngọc Phỉ Thuý Miến Điện mục tiêu",
-          price: 2060000,
-          fromPrice: 1860000,
-          image: "/images/products/ngoc-mien-dien-muc-tieu.webp",
-          alt: "Vòng full ngọc phỉ thuý Miến Điện 6 ly có một viên đá hồng ở giữa và charm bạc",
-        },
-        {
           name: "Thiên Vi full đá tròn 8 ly Tì Hưu",
           price: 2390000,
           fromPrice: 2190000,
@@ -240,16 +215,10 @@ export const products = {
           image: "/images/products/thien-an-quan-1.webp",
           alt: "Tay cầm vòng Thiên Ân quấn 1: ngọc bích xanh, đá bánh xe nhiều màu và charm rơi",
         },
-        {
-          name: "Lắc tay Thiên Ân mục tiêu",
-          price: 2725000,
-          image: "/images/products/lac-thien-an-muc-tieu.webp",
-          alt: "Lắc tay bạc Thiên Ân có đồng điếu ngọc phỉ thuý và đá bánh xe nhiều màu",
-        },
       ],
     },
     {
-      label: "Từ 3 triệu",
+      label: "Trên 3 triệu",
       items: [
         {
           name: "Thiên Ân quấn 1 charm hoa Ưu Đàm",
@@ -277,7 +246,7 @@ export const products = {
   ] satisfies { label: string; items: Product[] }[],
   /** Ô thứ 4 cho phân khúc chưa đủ 4 mẫu. */
   customTile: { title: "Thiết kế riêng theo yêu cầu", body: "Nhắn Pancharm để được báo giá" },
-  note: "Giá bản dây bạc, đã gồm thuế, miễn phí vận chuyển; áp dụng cổ tay 14–16cm. Bản titan/cước có giá thấp hơn. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",
+  note: "Nhắn Pancharm để nhận báo giá theo mẫu và chất liệu bạn chọn. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",
 };
 
 /** Khối “Thiết kế theo mong muốn của riêng bạn”: ảnh tràn viền + chip mong muốn + thư viện ảnh thật. */
