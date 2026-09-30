@@ -571,18 +571,12 @@ export const faq = {
     {
       id: "giong-anh",
       q: "Vòng có giống mẫu trên ảnh không?",
-      a: "Ảnh trên trang là các thiết kế thực tế Pancharm đã làm. Vì mỗi chiếc vòng được phối theo Bát Tự của từng người, loại đá, màu và tỷ lệ có thể khác ảnh mẫu. Pancharm sẽ gửi phương án thiết kế để bạn duyệt trước.",
+      a: "Trước khi vận chuyển, Pancharm sẽ gửi bạn ảnh thực tế khi thiết kế xong, bạn duyệt ưng thì mới vận chuyển.",
     },
     {
       id: "kiem-dinh",
       q: "Đá có kiểm định không?",
-      a: "Pancharm có hồ sơ kiểm định DOJILAB cho các mẫu đá/chất liệu áp dụng (ví dụ ngọc Jadeite tự nhiên, bạc Ag). Mỗi chứng thư chỉ xác nhận đúng mẫu được kiểm định; bạn có thể hỏi chuyên viên về hồ sơ của loại đá trong thiết kế của mình.",
-    },
-    {
-      id: "thoi-gian",
-      q: "Bao lâu thì nhận được vòng?",
-      a: "",
-      pending: "Thời gian trả kết quả luận, thời gian làm vòng và thời gian giao hàng.",
+      a: "Tất cả các nguyên liệu đều được kiểm định tại các cơ sở uy tín hàng đầu, bạn có thể tự tra cứu trên website để yên tâm nhé.",
     },
     {
       id: "gia",
