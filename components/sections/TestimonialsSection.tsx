@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { testimonials, type Review } from "@/data/content";
-import { gaEvent } from "@/lib/analytics";
+import { MessengerLink } from "../MessengerCTA";
 import { SectionHeading } from "../SectionHeading";
 
 /**
@@ -12,10 +11,6 @@ import { SectionHeading } from "../SectionHeading";
  * lượt thích, "x phút trước" hay phản hồi của shop.
  */
 export function TestimonialsSection() {
-  const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? testimonials.items : testimonials.items.slice(0, testimonials.initialCount);
-  const hidden = testimonials.items.length - testimonials.initialCount;
-
   return (
     <section id="danh-gia" aria-labelledby="reviews-title" className="band-sand section">
       <div className="container-page">
@@ -33,24 +28,29 @@ export function TestimonialsSection() {
             </p>
           </div>
 
-          <ul>
-            {visible.map((review, i) => (
+          {/* Toàn bộ bình luận trong khung cuộn riêng để trang không bị dài quá. */}
+          <ul
+            tabIndex={0}
+            aria-label="Danh sách bình luận, cuộn để xem thêm"
+            className="max-h-[min(150vh,1100px)] overflow-y-auto overscroll-contain"
+          >
+            {testimonials.items.map((review, i) => (
               <Comment key={i} review={review} index={i} />
             ))}
           </ul>
 
-          {!expanded && hidden > 0 && (
-            <button
-              type="button"
-              onClick={() => {
-                setExpanded(true);
-                gaEvent("reviews_expand");
-              }}
-              className="mb-2 flex min-h-12 w-full items-center justify-center rounded-md bg-[#f5f6f7] text-[14px] font-semibold text-[#385898] hover:bg-[#ebedf0]"
-            >
-              Xem thêm {hidden} bình luận
-            </button>
-          )}
+          {/* Dòng mời gửi cảm nhận, kiểu "đang nhập bình luận" nhưng nội dung đúng sự thật. */}
+          <MessengerLink
+            source="benefit"
+            className="flex items-center gap-3 border-t border-[#dddfe2] py-3 text-[13px] text-[#606770] hover:text-[#385898]"
+          >
+            <span aria-hidden="true" className="flex gap-1">
+              <span className="size-1.5 animate-pulse rounded-full bg-[#90949c]" />
+              <span className="size-1.5 animate-pulse rounded-full bg-[#90949c] [animation-delay:150ms]" />
+              <span className="size-1.5 animate-pulse rounded-full bg-[#90949c] [animation-delay:300ms]" />
+            </span>
+            {testimonials.invite}
+          </MessengerLink>
         </div>
 
         <p className="mt-4 text-center text-[12px] leading-snug text-muted">{testimonials.note}</p>

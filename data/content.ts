@@ -380,7 +380,7 @@ export const testimonials = {
   title: "Khách hàng nói về Pancharm",
   subtitle: "Hơn 1.000 khách hàng đã lựa chọn và tin tưởng",
   note: "Trích nguyên văn tin nhắn khách hàng gửi Pancharm, đã ẩn tên. Đây là cảm nhận cá nhân của từng khách hàng, không phải cam kết về kết quả.",
-  initialCount: 6,
+  invite: "Bạn đã đeo vòng Pancharm? Nhắn gửi cảm nhận của bạn…",
   items: [
     {
       name: "T***n",
