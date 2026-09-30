@@ -12,12 +12,12 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
   return (
     <header
-      className={`${overlay ? "absolute inset-x-0 top-0 z-30" : "relative"} container-page grid h-16 grid-cols-[2.75rem_1fr_2.75rem] items-center`}
+      className={`${overlay ? "absolute inset-x-0 top-0 z-30" : "relative"} container-page grid h-[72px] grid-cols-[2.75rem_1fr_2.75rem] items-center`}
     >
       {/* Cột trái để trống cùng bề rộng nút menu, nhờ vậy logo nằm đúng giữa màn hình. */}
       <span aria-hidden="true" />
       <Link href="/" aria-label="Pancharm – về đầu trang" className="justify-self-center">
-        <Logo />
+        <Logo size="lg" />
       </Link>
       <button
         type="button"
