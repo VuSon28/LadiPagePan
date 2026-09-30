@@ -298,7 +298,7 @@ export const design = {
   galleryTitle: "Ảnh khách hàng gửi về",
   /** Ảnh khách hàng gửi về (Downloads 30/09/2026); ảnh chụp màn hình chat đã cắt lấy phần ảnh vòng. */
   gallery: [
-    { src: "/images/customers/khach-03.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt xanh ngọc phối hồng nhạt và charm giọt nước" },
+    { src: "/images/customers/khach-12.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng tì hưu ngọc xanh phối hạt cam, trắng" },
     { src: "/images/customers/khach-02.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt hồng cam có charm ngôi sao, nền cây xanh" },
     { src: "/images/customers/khach-01.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt trắng bên hộp quà Pancharm trên bàn làm việc" },
     { src: "/images/customers/khach-04.webp", alt: "Ảnh khách gửi: tay cầm bút đeo vòng hạt xanh đậm phối trắng" },
@@ -309,7 +309,7 @@ export const design = {
     { src: "/images/customers/khach-09.webp", alt: "Ảnh khách gửi: tay cầm hộp Pancharm có vòng hạt nhiều màu bên trong" },
     { src: "/images/customers/khach-10.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt hồng dâu có charm bạc" },
     { src: "/images/customers/khach-11.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng Thiên Ân ngọc bích xanh, đồng điếu ngọc trắng và charm rơi" },
-    { src: "/images/customers/khach-12.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng tì hưu ngọc xanh phối hạt cam, trắng" },
+    { src: "/images/customers/khach-03.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt xanh ngọc phối hồng nhạt và charm giọt nước" },
   ],
 };
 
