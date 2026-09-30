@@ -6,15 +6,17 @@ import { nav } from "@/data/content";
 import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 
-/** Header nằm đè lên ảnh hero; menu mở ra danh sách link tới từng phần. */
+/** Header nằm đè lên ảnh hero, logo ở giữa; menu mở ra danh sách link tới từng phần. */
 export function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
     <header
-      className={`${overlay ? "absolute inset-x-0 top-0 z-30" : "relative"} container-page flex h-16 items-center justify-between`}
+      className={`${overlay ? "absolute inset-x-0 top-0 z-30" : "relative"} container-page grid h-16 grid-cols-[2.75rem_1fr_2.75rem] items-center`}
     >
-      <Link href="/" aria-label="Pancharm – về đầu trang">
+      {/* Cột trái để trống cùng bề rộng nút menu, nhờ vậy logo nằm đúng giữa màn hình. */}
+      <span aria-hidden="true" />
+      <Link href="/" aria-label="Pancharm – về đầu trang" className="justify-self-center">
         <Logo />
       </Link>
       <button
@@ -23,7 +25,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         aria-expanded={open}
         aria-controls="site-menu"
         aria-label={open ? "Đóng menu" : "Mở menu"}
-        className="-mr-2 grid size-11 place-items-center rounded-full text-cream"
+        className="-mr-2 grid size-11 place-items-center justify-self-end rounded-full text-cream"
       >
         <Icon name={open ? "close" : "menu"} className="size-6" strokeWidth={1.8} />
       </button>
