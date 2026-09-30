@@ -16,7 +16,12 @@ function msUntilEndOfDayVN(now: number) {
 
 function split(ms: number) {
   const s = Math.floor(ms / 1000);
-  return [Math.floor(s / 86_400), Math.floor(s / 3600) % 24, Math.floor(s / 60) % 60, s % 60];
+  return [
+    Math.floor(s / 86_400),
+    Math.floor(s / 3600) % 24,
+    Math.floor(s / 60) % 60,
+    s % 60,
+  ];
 }
 
 export function OfferCountdown() {
@@ -33,15 +38,32 @@ export function OfferCountdown() {
   const parts = remaining === null ? null : split(remaining);
 
   return (
-    <section id="uu-dai" aria-labelledby="offer-title" className="band-danger section">
+    <section
+      id="uu-dai"
+      aria-labelledby="offer-title"
+      className="band-danger section"
+    >
       <div className="container-page">
         <div className="card soft-shadow px-4 py-6 text-center">
-          <h2 id="offer-title" className="font-serif text-[22px] leading-tight font-semibold text-ink">
+          <h2
+            id="offer-title"
+            className="font-serif text-[22px] leading-tight font-semibold text-ink"
+          >
             {offer.title}
           </h2>
-          <p className="mx-auto mt-2 max-w-[34ch] text-[13.5px] leading-snug text-muted">{offer.body}</p>
+          <p className="mx-auto mt-2 max-w-[34ch] text-[13.5px] leading-snug text-muted">
+            {offer.body}
+          </p>
 
-          <div role="timer" aria-live="off" className="mt-5 grid grid-cols-4 gap-2">
+          <p className="mt-5 text-[14px] font-semibold text-ink">
+            {offer.timerLabel}
+          </p>
+          <div
+            role="timer"
+            aria-live="off"
+            aria-label={offer.timerLabel}
+            className="mt-2 grid grid-cols-4 gap-2"
+          >
             {offer.units.map((unit, i) => (
               <div key={unit}>
                 <span className="block rounded-2xl bg-danger py-3 font-sans text-[28px] leading-none font-bold text-cream tabular-nums">
@@ -54,7 +76,13 @@ export function OfferCountdown() {
             ))}
           </div>
 
-          <MessengerCTA source="offer" label={offer.cta} variant="danger" className="mt-5 w-full" />
+          {/* Nút nảy theo nhịp như mẫu tham chiếu (animate-cta-bounce trong globals.css). */}
+          <MessengerCTA
+            source="offer"
+            label={offer.cta}
+            variant="danger"
+            className="animate-cta-bounce mt-5 w-full"
+          />
         </div>
 
         <ul className="mt-4 grid gap-2">

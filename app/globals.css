@@ -161,6 +161,32 @@ body {
   animation: blink 1.1s ease-in-out infinite;
 }
 
+/*
+ * Nút CTA khối ưu đãi: đứng yên ~nửa nhịp, nảy lên rồi nảy nhẹ lần hai (bám theo video mẫu, chu kỳ 1s).
+ * Chỉ dùng transform nên không làm xô lệch bố cục xung quanh.
+ */
+@keyframes cta-bounce {
+  0%,
+  45%,
+  72%,
+  90%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.35, 1);
+  }
+  58% {
+    transform: translateY(-10px);
+    animation-timing-function: cubic-bezier(0.6, 0, 0.8, 0.4);
+  }
+  81% {
+    transform: translateY(-4px);
+    animation-timing-function: cubic-bezier(0.6, 0, 0.8, 0.4);
+  }
+}
+.animate-cta-bounce {
+  animation: cta-bounce 1s infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -172,7 +198,8 @@ body {
     animation-duration: 0.01ms !important;
   }
   /* Không nhấp nháy: giữ chữ hiện rõ thay vì dừng ở một mức mờ ngẫu nhiên. */
-  .animate-blink {
+  .animate-blink,
+  .animate-cta-bounce {
     animation: none;
   }
 }

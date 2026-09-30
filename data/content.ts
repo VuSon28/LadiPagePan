@@ -542,7 +542,8 @@ export const testimonials = {
 
 /** Khối ưu đãi + đồng hồ đếm ngược. Hạn ưu đãi: 23:59:59 mỗi ngày theo giờ Việt Nam. */
 export const offer = {
-  title: "Thời gian ưu đãi còn lại",
+  title: "Đặt vòng và sống thuận mệnh ngay hôm nay",
+  timerLabel: "Thời gian ưu đãi còn lại",
   body: "Tặng lá số & luận giải Bát Tự trị giá 500.000đ, miễn phí cho khách nhắn tin trong hôm nay.",
   units: ["Ngày", "Giờ", "Phút", "Giây"],
   cta: "Nhắn tin nhận tư vấn ngay",
