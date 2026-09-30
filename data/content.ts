@@ -298,9 +298,9 @@ export const design = {
   galleryTitle: "Ảnh khách hàng gửi về",
   /** Ảnh khách hàng gửi về (Downloads 30/09/2026); ảnh chụp màn hình chat đã cắt lấy phần ảnh vòng. */
   gallery: [
-    { src: "/images/customers/khach-01.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt trắng bên hộp quà Pancharm trên bàn làm việc" },
-    { src: "/images/customers/khach-02.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt hồng cam có charm ngôi sao, nền cây xanh" },
     { src: "/images/customers/khach-03.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt xanh ngọc phối hồng nhạt và charm giọt nước" },
+    { src: "/images/customers/khach-02.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt hồng cam có charm ngôi sao, nền cây xanh" },
+    { src: "/images/customers/khach-01.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt trắng bên hộp quà Pancharm trên bàn làm việc" },
     { src: "/images/customers/khach-04.webp", alt: "Ảnh khách gửi: tay cầm bút đeo vòng hạt xanh đậm phối trắng" },
     { src: "/images/customers/khach-05.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng ngọc xanh đậm cùng chuỗi hạt vàng nhạt" },
     { src: "/images/customers/khach-06.webp", alt: "Ảnh khách gửi: cổ tay đeo lắc bạc có hạt đá vàng" },
