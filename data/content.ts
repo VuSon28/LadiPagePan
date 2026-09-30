@@ -561,12 +561,12 @@ export const faq = {
     {
       id: "gio-sinh",
       q: "Không biết chính xác giờ sinh thì sao?",
-      a: "Bạn vẫn có thể nhắn Pancharm. Giờ sinh giúp luận Bát Tự đầy đủ hơn; nếu chưa rõ, tư vấn viên sẽ trao đổi thêm với bạn về cách xử lý phù hợp trong hội thoại.",
+      a: "Bạn vẫn có thể nhắn Pancharm. Giờ sinh giúp luận Bát Tự đầy đủ hơn; nếu chưa rõ, chuyên viên (trợ lý thầy cố vấn) sẽ trao đổi thêm với bạn về cách xử lý phù hợp trong hội thoại.",
     },
     {
       id: "phi-luan",
       q: "Luận Bát Tự có mất phí không?",
-      a: "Không. Luận Bát Tự là bước tư vấn không mất phí, giúp bạn hiểu vì sao loại đá và thiết kế được đề xuất phù hợp với mình.",
+      a: "Hiện tại Pancharm đang tặng luận giải Bát Tự, bạn nhắn sớm kẻo hết chương trình nhé.",
     },
     {
       id: "giong-anh",
@@ -576,7 +576,7 @@ export const faq = {
     {
       id: "kiem-dinh",
       q: "Đá có kiểm định không?",
-      a: "Pancharm có hồ sơ kiểm định DOJILAB cho các mẫu đá/chất liệu áp dụng (ví dụ ngọc Jadeite tự nhiên, bạc Ag). Mỗi chứng thư chỉ xác nhận đúng mẫu được kiểm định; bạn có thể hỏi tư vấn viên về hồ sơ của loại đá trong thiết kế của mình.",
+      a: "Pancharm có hồ sơ kiểm định DOJILAB cho các mẫu đá/chất liệu áp dụng (ví dụ ngọc Jadeite tự nhiên, bạc Ag). Mỗi chứng thư chỉ xác nhận đúng mẫu được kiểm định; bạn có thể hỏi chuyên viên về hồ sơ của loại đá trong thiết kế của mình.",
     },
     {
       id: "thoi-gian",
@@ -587,7 +587,7 @@ export const faq = {
     {
       id: "gia",
       q: "Giá được tính ra sao?",
-      a: "Các mẫu vòng Pancharm có giá từ 299.000đ (bản dây titan) đến khoảng 6.300.000đ, đã gồm thuế và miễn phí vận chuyển. Giá cuối cùng phụ thuộc vào loại đá, chất liệu và phương án thiết kế; tư vấn viên sẽ báo giá cụ thể sau khi bạn chọn phương án phù hợp.",
+      a: "Các mẫu vòng Pancharm có giá từ 299.000đ (bản dây titan) đến khoảng 6.300.000đ, đã gồm thuế và miễn phí vận chuyển. Giá cuối cùng phụ thuộc vào loại đá, chất liệu và phương án thiết kế; chuyên viên sẽ báo giá cụ thể sau khi bạn chọn phương án phù hợp.",
     },
   ] as { id: string; q: string; a: string; pending?: string }[],
 };
