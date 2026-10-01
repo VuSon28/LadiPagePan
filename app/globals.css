@@ -187,6 +187,22 @@ body {
   animation: cta-bounce 1s infinite;
 }
 
+@keyframes typing-bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+.animate-typing-bounce {
+  animation: typing-bounce 1s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -199,7 +215,8 @@ body {
   }
   /* Không nhấp nháy: giữ chữ hiện rõ thay vì dừng ở một mức mờ ngẫu nhiên. */
   .animate-blink,
-  .animate-cta-bounce {
+  .animate-cta-bounce,
+  .animate-typing-bounce {
     animation: none;
   }
 }

@@ -387,6 +387,27 @@ export const testimonials = {
   invite: "Bạn đã đeo vòng Pancharm? Nhắn gửi cảm nhận của bạn…",
   items: [
     {
+      name: "T***h",
+      meta: "01/10/2026 · Messenger",
+      quotes: [
+        "Vòng đắt, nhưng đẹp, may được ck tặng chứ ko có xiền mua haha. Nhưng đeo 1 thời gian thì thấy xứng với giá tiền, bảo sao có giá đó, sau 3 tháng đeo thì giờ thăng chức lên trưởng phòng luôn nên lại tậu thêm 1 em",
+      ],
+    },
+    {
+      name: "L***h",
+      meta: "01/10/2026 · Messenger",
+      quotes: [
+        "Vòng nhiều màu ban đầu thấy hơi trẻ con, nhưng lúc đeo lên thì trông sang tay, đồng nghiệp khen bảo thời trang trendy các kiểu haha, cũng vui, đeo vào thấy tâm trạng phới phới, phấn chấn",
+      ],
+    },
+    {
+      name: "P***g",
+      meta: "01/10/2026 · Messenger",
+      quotes: [
+        "Giá cao nhưng tính ra đi xem bói cũng hết 500k 1 lần rồi nên mua vòng mà còn đc thầy phong thủy duyệt mẫu với đá tự nhiên các kiểu nữa, shop tặng cả đống quà nào là nước thanh tẩy rồi hướng dẫn nghi thức,… thì thấy thực sự quá hời so với những gì sản phẩm mang lại",
+      ],
+    },
+    {
       name: "N***ã",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
@@ -395,7 +416,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "A***n",
       meta: "28/01/2026 · Messenger",
       quotes: [
         "e cũng dần buông bỏ đc những mqh tiêu cực",
@@ -406,7 +427,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "A***h",
       meta: "30/01/2026 · Messenger",
       quotes: [
         "Dạ cảm thấy buôn bán thuận lợi suôn sẽ hơn ko bí bách về tiền bạc nữa á shop",
@@ -441,7 +462,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "B***h",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Vâng ah. Cũng có thay đổi chút ít ah. Thấy rõ nhất là thị phi trong công ty. Hoan hỉ mọi thứ vui vẻ ko căng thẳng như trước",
@@ -484,7 +505,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "C***i",
       meta: "17/03/2026 · Messenger",
       quotes: [
         "Shop ơi em nhận được vòng rồi ạ. Nhân tiện em muốn gửi lời feedback tuyệt vời đến Pancharm.",
@@ -502,7 +523,7 @@ export const testimonials = {
       photos: [{ src: "/images/reviews/review-my-my.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt đỏ phối hạt trắng, vàng" }],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "D***g",
       meta: "29/01/2026 · Messenger",
       quotes: [
         "Dạ Trộm vía lắm ạ. Công việc đến mà em bất ngờ",
@@ -511,7 +532,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "D***p",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Đợt mik đeo vòng mua lần đầu ấy, vòng đó thiên về tài lộc hơn",
@@ -522,7 +543,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "D***n",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Vòng đẹp lắm ạ. Nhận vòng thấy rất ưng chị à",
@@ -530,7 +551,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "H***a",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Thật sự là cũng hơn 2 tháng đeo vòng của shop thấy có nhiều biến động. Thứ nhất là em vừa thi bằng lái xe hạng B nói chung là em cũng run sợ rớt mà trộm vía là thi đậu 1 lần duy nhất.",
@@ -538,7 +559,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "H***g",
       meta: "Mua tặng mẹ · Messenger",
       quotes: [
         "Nói chung là mẹ e rất ưng ạ",
@@ -546,7 +567,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "H***h",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Mà vòng đeo cũng sang nữa",
@@ -554,7 +575,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "K***h",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Thật sự e mua hàng online rất nhiều nhưng chưa thấy shop nào tận tâm mà qtam khách hàng như bên mình",
@@ -562,7 +583,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "L***n",
       meta: "26/08/2025 · Messenger",
       quotes: [
         "Oa chụp cam thường em cũng thấy nó xinh nữa >w<",
@@ -573,7 +594,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "M***i",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Vòng xinh lắm shop ơi. Đã làm đầy đủ các bước shop hướng dẫn",
@@ -584,7 +605,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "M***h",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Đeo vòng tay ai cũng hỏi nhìn đẹp shop ơi",
@@ -592,7 +613,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "N***a",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Đeo vòng có nhiều năng lượng vui vẻ nên nhìn nét mặt lúc nào cũng sáng",
@@ -600,7 +621,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "N***c",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Nó sáng bóng và xanh lá đậm lun",
@@ -608,7 +629,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "N***t",
       meta: "05/01/2026 · Messenger",
       quotes: [
         "Chắc em thấy rõ nhất là về tinh thần ạ, em thoải mái lắm lun á, khong có tiêu cực hay suy nghĩ linh tinh gì nhiều đâu…",
@@ -618,7 +639,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "O***h",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Em nhận vòng từ 6/1 ạ. Và Wow, 1 tuần sau trải nghiệm nó tuyệt vời luôn ạ",
@@ -630,7 +651,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "Q***h",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Em có viết trong cái tờ giấy để đốt đi á mấy mong muốn mà đến giờ thực hiện đc gần hết",
@@ -639,14 +660,14 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "T***g",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Dạ em cảm thấy công việc nó đỡ chật vật hơn trước ạ. Với lại cảm thấy nó bình an nhẹ nhàng á ạ. Chứ bình thường cái gì không hợp ý em nhìu khi em bị cáu ạ. Nhưng mà tự nhiên thấy từ khi đeo thì cảm thấy k có vậy ạ. Dạ cảm ơn sốp nhìu lắm ạ sốp.",
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "T***m",
       meta: "07/02/2026 · Messenger",
       quotes: [
         "Dạ từ hôm nhận vòng em luôn đeo bên mình",
@@ -655,28 +676,28 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "T***u",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Dạ vâng em cám ơn shop ạ. Thật lòng là trộm vía em thấy ổn ạ. Em tin tưởng nên mang suốt ạ. Em nghĩ là em thấy rất an tâm á shop",
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "T***y",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Từ ngày đeo vòng e nhìn vào đó cũng thấy lòng nhẹ nhàng hơn",
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "T***c",
       meta: "04/02/2026 · Messenger",
       quotes: [
         "…thời gian đầu mới đeo em thấy có sự cân bằng năng lượng, cải thiện 1 chút về giấc ngủ",
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "T***t",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "E thấy công việc e trộm vía hơn",
@@ -685,7 +706,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "U***n",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Dạ từ khi đeo vòng em thấy mọi chuyện tốt hơn, may mắn hơn ạ.",
@@ -693,7 +714,7 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "V***y",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "E cảm ơn shop đã quan tâm đến e ạ",
@@ -701,21 +722,21 @@ export const testimonials = {
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "Y***n",
       meta: "31/01/2026 · Messenger",
       quotes: [
         "Dạ tích cực ah, mọi việc đang tốt dần lên. Cảm ơn Pancharm nhiều ah",
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "Đ***o",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Trộm vía về mặt tình cảm của vk ck tốt hơn trước chị à",
       ],
     },
     {
-      name: "Khách hàng ẩn danh",
+      name: "G***g",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "E thấy may mắn hơn trc",

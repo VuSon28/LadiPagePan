@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { OrderNotificationToast } from "@/components/OrderNotificationToast";
 import { StickyMessengerCTA } from "@/components/StickyMessengerCTA";
 import { BatTuInsightSection } from "@/components/sections/BatTuInsightSection";
 import { CertificateSection } from "@/components/sections/CertificateSection";
@@ -33,6 +34,7 @@ export default function Home() {
       </main>
       <Footer />
       <StickyMessengerCTA />
+      <OrderNotificationToast />
     </>
   );
 }

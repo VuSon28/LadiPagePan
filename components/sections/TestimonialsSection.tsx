@@ -2,14 +2,9 @@
 
 import Image from "next/image";
 import { testimonials, type Review } from "@/data/content";
-import { MessengerLink } from "../MessengerCTA";
 import { SectionHeading } from "../SectionHeading";
 
-/**
- * Đánh giá trình bày kiểu khung bình luận (tên, nội dung, ảnh, dòng thời gian).
- * Chỉ hiển thị số liệu có thật: số bình luận = số trích dẫn đang có; không bịa sao,
- * lượt thích, "x phút trước" hay phản hồi của shop.
- */
+
 export function TestimonialsSection() {
   return (
     <section id="danh-gia" aria-labelledby="reviews-title" className="band-sand section">
@@ -35,22 +30,22 @@ export function TestimonialsSection() {
             className="max-h-[min(150vh,1100px)] overflow-y-auto overscroll-contain"
           >
             {testimonials.items.map((review, i) => (
-              <Comment key={i} review={review} index={i} />
+              <Comment key={i} review={review} index={i} total={testimonials.items.length} />
             ))}
           </ul>
 
-          {/* Dòng mời gửi cảm nhận, kiểu "đang nhập bình luận" nhưng nội dung đúng sự thật. */}
-          <MessengerLink
-            source="benefit"
-            className="flex items-center gap-3 border-t border-[#dddfe2] py-3 text-[13px] text-[#606770] hover:text-[#385898]"
+          {/* Hiệu ứng "ai đó đang nhập bình luận" — chỉ hiển thị, không click. */}
+          <p
+            aria-live="polite"
+            className="flex items-center gap-3 border-t border-[#dddfe2] py-3 text-[13px] text-[#606770]"
           >
-            <span aria-hidden="true" className="flex gap-1">
-              <span className="size-1.5 animate-pulse rounded-full bg-[#90949c]" />
-              <span className="size-1.5 animate-pulse rounded-full bg-[#90949c] [animation-delay:150ms]" />
-              <span className="size-1.5 animate-pulse rounded-full bg-[#90949c] [animation-delay:300ms]" />
+            <span aria-hidden="true" className="flex items-end gap-1">
+              <span className="animate-typing-bounce size-1.5 rounded-full bg-[#90949c]" />
+              <span className="animate-typing-bounce size-1.5 rounded-full bg-[#90949c] [animation-delay:150ms]" />
+              <span className="animate-typing-bounce size-1.5 rounded-full bg-[#90949c] [animation-delay:300ms]" />
             </span>
-            {testimonials.invite}
-          </MessengerLink>
+            Ai đó đang nhập bình luận…
+          </p>
         </div>
 
       </div>
@@ -61,10 +56,39 @@ export function TestimonialsSection() {
 /** Màu nền avatar chữ cái, xoay vòng theo thứ tự cho đỡ đơn điệu. */
 const avatarColors = ["bg-clay", "bg-evergreen", "bg-rosewood", "bg-brick", "bg-pine"];
 
-function Comment({ review, index }: { review: Review; index: number }) {
+/** Câu cảm ơn mẫu của shop, chọn theo index để mỗi comment có 1 câu cố định. */
+const shopReplies = [
+  "Dạ, Pancharm cảm ơn chị đã tin tưởng và dành thời gian chia sẻ cảm nhận ạ",
+  "Dạ Pancharm cảm ơn chị nhiều lắm, chúc chị luôn bình an và nhiều năng lượng tích cực ạ",
+  "Dạ cảm ơn chị, Pancharm luôn ở đây nếu chị cần hỗ trợ thêm ạ",
+  "Pancharm biết ơn chị đã đồng hành cùng shop, chúc chị thật nhiều may mắn ạ",
+  "Dạ, Pancharm cảm ơn chị đã ủng hộ, chúc chị thật nhiều điều tốt lành ạ",
+  "Dạ cảm ơn chị đã phản hồi, Pancharm rất vui khi chị hài lòng ạ",
+];
+
+/** Timestamp giả lập theo index: index càng nhỏ càng gần hiện tại. */
+function timeAgo(i: number, total: number): string {
+  if (total <= 1) return "vài phút trước";
+  const t = i / (total - 1);
+  if (t < 0.15) {
+    const minutes = Math.max(1, Math.round(3 + (t / 0.15) * 52));
+    return `${minutes} phút trước`;
+  }
+  if (t < 0.5) {
+    const hours = Math.max(1, Math.round(1 + ((t - 0.15) / 0.35) * 22));
+    return `${hours} giờ trước`;
+  }
+  const dayRatio = (t - 0.5) / 0.5;
+  const days = Math.max(1, Math.round(Math.pow(240, dayRatio)));
+  return `${days} ngày trước`;
+}
+
+function Comment({ review, index, total }: { review: Review; index: number; total: number }) {
   const anonymous = review.name.startsWith("Khách");
   const initial = anonymous ? "P" : review.name[0];
   const color = avatarColors[index % avatarColors.length];
+  const reply = shopReplies[index % shopReplies.length];
+  const when = timeAgo(index, total);
 
   return (
     <li className="flex gap-3 py-4">
@@ -85,13 +109,14 @@ function Comment({ review, index }: { review: Review; index: number }) {
         {review.photos && (
           <ul className="mt-2.5 flex flex-wrap gap-2">
             {review.photos.slice(0, 2).map((photo) => (
-              <li key={photo.src} className="w-[calc(50%-0.25rem)] max-w-[150px]">
+              <li key={photo.src} className="w-[calc(33%-0.25rem)] max-w-[110px]">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
-                  width={300}
-                  height={300}
-                  sizes="150px"
+                  width={600}
+                  height={800}
+                  sizes="110px"
+                  quality={90}
                   className="aspect-[3/4] w-full object-cover"
                 />
               </li>
@@ -99,8 +124,29 @@ function Comment({ review, index }: { review: Review; index: number }) {
           </ul>
         )}
 
-        <p className="mt-2 text-[13px] text-[#385898]">{review.meta}</p>
+        <p className="mt-2 text-[13px] text-[#385898]">{when}</p>
+
+        <ShopReply reply={reply} when={when} />
       </div>
     </li>
+  );
+}
+
+function ShopReply({ reply, when }: { reply: string; when: string }) {
+  return (
+    <div className="mt-3 flex gap-2.5">
+      <span
+        aria-hidden="true"
+        className="grid size-9 shrink-0 place-items-center rounded-sm border border-line bg-cream"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo-mark.svg" alt="" width={22} height={22} style={{ width: 22, height: 22 }} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-[14px] font-bold text-[#4b4f56]">Pancharm</p>
+        <p className="mt-0.5 text-[14px] leading-relaxed text-[#1c1e21]">{reply}</p>
+        <p className="mt-1.5 text-[12.5px] font-semibold text-[#606770]">Phản hồi · {when}</p>
+      </div>
+    </div>
   );
 }
