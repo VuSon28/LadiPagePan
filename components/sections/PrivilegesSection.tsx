@@ -1,6 +1,5 @@
 import { privileges } from "@/data/content";
 import { Icon } from "../Icon";
-import { Pending } from "../Pending";
 
 export function PrivilegesSection() {
   return (
@@ -20,7 +19,6 @@ export function PrivilegesSection() {
             </li>
           ))}
         </ul>
-        {privileges.pending && <Pending className="mt-5">{privileges.pending}</Pending>}
       </div>
     </section>
   );

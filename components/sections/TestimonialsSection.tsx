@@ -53,7 +53,6 @@ export function TestimonialsSection() {
           </MessengerLink>
         </div>
 
-        <p className="mt-4 text-center text-[12px] leading-snug text-muted">{testimonials.note}</p>
       </div>
     </section>
   );

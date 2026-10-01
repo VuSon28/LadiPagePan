@@ -22,26 +22,16 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <FooterPending>{footer.pending.legal}</FooterPending>
         <nav aria-label="Chính sách" className="flex flex-wrap gap-x-5 gap-y-2">
           <Link href="/chinh-sach-bao-mat" className="underline underline-offset-4 hover:text-cream">
             Chính sách bảo mật
           </Link>
         </nav>
-        <FooterPending>{footer.pending.policies}</FooterPending>
         <p className="border-t border-cream/15 pt-4 text-[12px] text-cream/60">
           © {new Date().getFullYear()} Pancharm. Các ý nghĩa phong thủy được trình bày theo quan niệm truyền thống, không
           phải cam kết kết quả.
         </p>
       </div>
     </footer>
-  );
-}
-
-function FooterPending({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="rounded-lg border border-dashed border-cream/45 px-3 py-2">
-      <span className="font-semibold text-cream">[CẦN BỔ SUNG]</span> {children}
-    </p>
   );
 }
