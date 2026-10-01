@@ -19,7 +19,7 @@ export function TestimonialsSection() {
         <div className="mt-7 rounded-2xl border border-line bg-white px-4 pt-4 pb-2 text-ink shadow-sm">
           <h3 className="text-[22px] font-bold tracking-tight text-[#4b4f56]">Tất cả bình luận</h3>
           <div className="mt-3 flex items-center justify-between gap-3 border-b border-[#dddfe2] pb-3">
-            <p className="text-[14px] font-bold text-[#4b4f56]">{testimonials.items.length} Bình luận</p>
+            <p className="text-[14px] font-bold text-[#4b4f56]">{512} Bình luận</p>
             <p className="flex items-center gap-2 text-[12.5px] text-[#606770]">
               Sắp xếp theo
               <span className="rounded-md border border-[#ccd0d5] bg-[#f5f6f7] px-3 py-1.5 text-[13px] font-bold text-[#4b4f56]">
