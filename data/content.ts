@@ -383,6 +383,67 @@ export const testimonials = {
   invite: "Bạn đã đeo vòng Pancharm? Nhắn gửi cảm nhận của bạn…",
   items: [
     {
+      name: "N***ã",
+      meta: "Đã mua tại Pancharm · Messenger",
+      quotes: [
+        "Nhìn chung mọi thứ vẫn đang tích cực hơn. Tiền tích lũy tốt, đầu tư sinh lời khá, tình cảm có chuyển biến tích cực. Trộm vía được nhiều người yêu thương, giúp đỡ nhưng mà chuyện tình cảm đôi lứa khá chật vật hicc...",
+        "Dây chỗ móc khóa có chỗ bị chìa kim loại hơi khó chịu tí chị ạ",
+      ],
+    },
+    {
+      name: "Khách hàng ẩn danh",
+      meta: "28/01/2026 · Messenger",
+      quotes: [
+        "e cũng dần buông bỏ đc những mqh tiêu cực",
+        "Tcam thì dạo này hơi có chút mâu thuẫn kéo dài nhưng cũng vẫn kiểm soát đc",
+        "Tiền nong thì dạo này cứ mất r lại có r mất :((",
+        "Mà vòng đẹp lắm ạ",
+        "Đeo lên tay trong dịu lắm á",
+      ],
+    },
+    {
+      name: "Khách hàng ẩn danh",
+      meta: "30/01/2026 · Messenger",
+      quotes: [
+        "Dạ cảm thấy buôn bán thuận lợi suôn sẽ hơn ko bí bách về tiền bạc nữa á shop",
+        "Lúc đeo thì ko cảm nhận được gì hết giống như vòng trang trí thường đeo lâu mới thấy có thay đổi như nó ko thay đổi liền mà chậm từ từ",
+      ],
+    },
+    {
+      name: "N***n",
+      meta: "Đã mua tại Pancharm · Messenger",
+      quotes: [
+        "Shop ơi hiện em vẫn đang đeo vòng bên mình shop nhé",
+        "Sau 1 thời gian đeo em thấy tâm trạng cũng cải thiện 1 chút dù có đôi lúc hơi xì trét,nhưng trộm vía sức khỏe ổn định shop nhé",
+      ],
+    },
+    {
+      name: "N***i",
+      meta: "Đã mua tại Pancharm · Messenger",
+      quotes: [
+        "Dạ chào shop ạ. Công việc em dạo này vẫn tốt ạ, sức khỏe cũng tốt luôn , với em không còn bị bất cẩn và vô tâm giống lúc trước nữa ạ",
+        "Trộm vía mọi việc đều thuận lợi , tuy năm nay mệnh của em không giữ được tiền nhiều nhưng xem ra vẫn giữ được một ít",
+      ],
+    },
+    {
+      name: "T***o",
+      meta: "Đã mua tại Pancharm · Messenger",
+      quotes: [
+        "Dạ e cũng không biết nó có thay đổi cs em không nhưng nói chung em thấy kiểu tâm mình nó an yên hơn từ khi va vào con đường đá phong thuỷ ạ",
+        "Kiểu như e thấy mình bớt nóng tính hơn xưa",
+        "Về mặt tình duyên thì chắc duyên chưa tới nên e chưa thấy thay đổi nhiều ạ kkk",
+        "Nhưng e có thể chắc chắn vòng bên mình là đá thiên nhiên nha, tại e đeo lâu e thấy nó có vẻ đẹp hơn lúc e mới đeo",
+        "Coa mấy hạt nó trong hơn",
+      ],
+    },
+    {
+      name: "Khách hàng ẩn danh",
+      meta: "Đã mua tại Pancharm · Messenger",
+      quotes: [
+        "Vâng ah. Cũng có thay đổi chút ít ah. Thấy rõ nhất là thị phi trong công ty. Hoan hỉ mọi thứ vui vẻ ko căng thẳng như trước",
+      ],
+    },
+    {
       name: "T***n",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
@@ -435,16 +496,6 @@ export const testimonials = {
         "Tốt ạ nhờ hữu duyên gặp shop tốt còn rất tốt hơn nữa là khác từ trong gia đình đến ra ngoài xã hội còn có nhiều chuyện tốt xảy ra đến với em ko thể ngờ ạ vòng của em đeo nay bóng lắm ạ",
       ],
       photos: [{ src: "/images/reviews/review-my-my.webp", alt: "Ảnh khách gửi: cổ tay đeo vòng hạt đỏ phối hạt trắng, vàng" }],
-    },
-    {
-      name: "T***o",
-      meta: "Đã mua tại Pancharm · Messenger",
-      quotes: [
-        "Dạ e cũng không biết nó có thay đổi cs em không nhưng nói chung em thấy kiểu tâm mình nó an yên hơn từ khi va vào con đường đá phong thuỷ ạ",
-        "Kiểu như e thấy mình bớt nóng tính hơn xưa",
-        "Nhưng e có thể chắc chắn vòng bên mình là đá thiên nhiên nha, tại e đeo lâu e thấy nó có vẻ đẹp hơn lúc e mới đeo",
-        "Coa mấy hạt nó trong hơn",
-      ],
     },
     {
       name: "Khách hàng ẩn danh",
@@ -584,32 +635,10 @@ export const testimonials = {
       ],
     },
     {
-      name: "N***ã",
-      meta: "Đã mua tại Pancharm · Messenger",
-      quotes: [
-        "Nhìn chung mọi thứ vẫn đang tích cực hơn. Tiền tích lũy tốt, đầu tư sinh lời khá, tình cảm có chuyển biến tích cực. Trộm vía được nhiều người yêu thương, giúp đỡ nhưng mà chuyện tình cảm đôi lứa khá chật vật hicc...",
-      ],
-    },
-    {
-      name: "N***i",
-      meta: "Đã mua tại Pancharm · Messenger",
-      quotes: [
-        "Dạ chào shop ạ. Công việc em dạo này vẫn tốt ạ, sức khỏe cũng tốt luôn , với em không còn bị bất cẩn và vô tâm giống lúc trước nữa ạ",
-        "Trộm vía mọi việc đều thuận lợi , tuy năm nay mệnh của em không giữ được tiền nhiều nhưng xem ra vẫn giữ được một ít",
-      ],
-    },
-    {
       name: "Khách hàng ẩn danh",
       meta: "Đã mua tại Pancharm · Messenger",
       quotes: [
         "Dạ em cảm thấy công việc nó đỡ chật vật hơn trước ạ. Với lại cảm thấy nó bình an nhẹ nhàng á ạ. Chứ bình thường cái gì không hợp ý em nhìu khi em bị cáu ạ. Nhưng mà tự nhiên thấy từ khi đeo thì cảm thấy k có vậy ạ. Dạ cảm ơn sốp nhìu lắm ạ sốp.",
-      ],
-    },
-    {
-      name: "Khách hàng ẩn danh",
-      meta: "Đã mua tại Pancharm · Messenger",
-      quotes: [
-        "Vâng ah. Cũng có thay đổi chút ít ah. Thấy rõ nhất là thị phi trong công ty. Hoan hỉ mọi thứ vui vẻ ko căng thẳng như trước",
       ],
     },
     {
@@ -619,23 +648,6 @@ export const testimonials = {
         "Dạ từ hôm nhận vòng em luôn đeo bên mình",
         "Trộm vía cuối năm bận rộn nhưng sức khoẻ, cv, tài lộc thấy an ổn lắm ạ",
         "Em cảm ơn shop ah",
-      ],
-    },
-    {
-      name: "Khách hàng ẩn danh",
-      meta: "30/01/2026 · Messenger",
-      quotes: [
-        "Dạ cảm thấy buôn bán thuận lợi suôn sẽ hơn ko bí bách về tiền bạc nữa á shop",
-        "Lúc đeo thì ko cảm nhận được gì hết giống như vòng trang trí thường đeo lâu mới thấy có thay đổi như nó ko thay đổi liền mà chậm từ từ",
-      ],
-    },
-    {
-      name: "Khách hàng ẩn danh",
-      meta: "28/01/2026 · Messenger",
-      quotes: [
-        "e cũng dần buông bỏ đc những mqh tiêu cực",
-        "Mà vòng đẹp lắm ạ",
-        "Đeo lên tay trong dịu lắm á",
       ],
     },
     {
@@ -657,14 +669,6 @@ export const testimonials = {
       meta: "04/02/2026 · Messenger",
       quotes: [
         "…thời gian đầu mới đeo em thấy có sự cân bằng năng lượng, cải thiện 1 chút về giấc ngủ",
-      ],
-    },
-    {
-      name: "N***n",
-      meta: "Đã mua tại Pancharm · Messenger",
-      quotes: [
-        "Shop ơi hiện em vẫn đang đeo vòng bên mình shop nhé",
-        "Sau 1 thời gian đeo em thấy tâm trạng cũng cải thiện 1 chút dù có đôi lúc hơi xì trét,nhưng trộm vía sức khỏe ổn định shop nhé",
       ],
     },
     {
