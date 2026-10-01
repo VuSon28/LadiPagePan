@@ -28,7 +28,7 @@ export const hero = {
   ] as { text: string; em?: boolean }[][],
   body: "Sống thuận mệnh là chìa khoá hoá giải vận hạn, khó khăn.",
   /** Câu ưu đãi đặt thẳng lên nút CTA hero (thay cho thẻ quà tặng riêng). */
-  cta: "Nhận ngay lá số và luận giải trị giá 500.000đ",
+  cta: "Nhận ngay lá số và luận giải\ntrị giá 500.000đ",
   image: {
     src: "/images/hero/hero-pancharm-mobile.webp",
     alt: "Cận cảnh cổ tay đeo ba chuỗi vòng hạt đá màu xanh ngọc phối hạt vàng nhạt, nền lá xanh",

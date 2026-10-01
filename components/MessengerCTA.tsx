@@ -76,7 +76,7 @@ export function MessengerCTA({
       <span className={`grid size-10 shrink-0 place-items-center rounded-full ${v.glyph}`}>
         <Icon name="chat" filled className="size-5" />
       </span>
-      <span className="min-w-0 flex-1 text-center">{label}</span>
+      <span className="min-w-0 flex-1 text-center whitespace-pre-line">{label}</span>
       <span className={`grid size-9 shrink-0 place-items-center rounded-full border ${v.arrow}`}>
         <Icon name="chevron" className="size-4" strokeWidth={2} />
       </span>
