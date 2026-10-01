@@ -159,6 +159,11 @@ export const products = {
   segments: [
     {
       label: "900k – 1 triệu",
+      /** Ảnh lớn đứng riêng đầu phân khúc, 4 ảnh mẫu xếp bên dưới. */
+      banner: {
+        src: "/images/products/banner-dien-ngoc.webp",
+        alt: "BST Vòng tay Diên Ngọc của Pancharm: cổ tay đeo lắc bạc charm vô cực phối hạt đỏ cam, nền đỏ, dòng chữ Vô cực – bền vững, vạn sự hanh thông",
+      },
       items: [
         {
           name: "Diên đá charm vô cực",
@@ -244,7 +249,7 @@ export const products = {
         },
       ],
     },
-  ] satisfies { label: string; items: Product[] }[],
+  ] satisfies { label: string; banner?: { src: string; alt: string }; items: Product[] }[],
   /** Ô thứ 4 cho phân khúc chưa đủ 4 mẫu. */
   customTile: { title: "Thiết kế riêng theo yêu cầu", body: "Nhắn Pancharm để được báo giá" },
   note: "Nhắn Pancharm để nhận báo giá theo mẫu và chất liệu bạn chọn. Loại đá, màu và tỷ lệ phối được điều chỉnh lại theo Bát Tự của riêng bạn.",

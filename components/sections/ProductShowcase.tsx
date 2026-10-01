@@ -18,6 +18,16 @@ export function ProductShowcase() {
                 <span aria-hidden="true" className="h-5 w-1 rounded-full bg-blush" />
                 {segment.label}
               </h3>
+              {"banner" in segment && segment.banner && (
+                <Image
+                  src={segment.banner.src}
+                  alt={segment.banner.alt}
+                  width={1080}
+                  height={1080}
+                  sizes="(min-width: 480px) 440px, 92vw"
+                  className="soft-shadow mt-3 aspect-square w-full rounded-[22px] object-cover"
+                />
+              )}
               <ul className="mt-3 grid grid-cols-2 gap-3">
                 {segment.items.map((item) => (
                   <ProductCard key={item.name} item={item} />
