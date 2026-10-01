@@ -148,7 +148,7 @@ export type Product = {
  * Giá lấy từ "Pancharm giá bán sp [cập nhật 17072026].pdf" (bảng giá nội bộ số 2).
  * Giá đã gồm thuế, áp dụng cổ tay 14–16cm. Phân khúc xếp theo giá bản bạc.
  * Trang KHÔNG hiển thị giá (theo yêu cầu 30/09/2026); giá giữ ở đây để xếp phân khúc.
- * Mỗi mẫu phải có giá nằm đúng khoảng của nhãn phân khúc. Nhóm 900k–1tr lấy từ trang Diên và
+ * Mỗi mẫu nên có giá nằm đúng khoảng của nhãn phân khúc (giá các mẫu chưa có trong file là ước lượng, cần xác nhận). Nhóm 900k–1tr lấy từ trang Diên và
  * “Vòng full đá tròn cước” (dây cước) của file giá.
  * Thiên Ân: dùng giá chính thức từ 22/07/2026. Ảnh tách từ chính file PDF.
  * Không đưa mã sản phẩm / ghi chú nội bộ lên trang.
@@ -195,31 +195,28 @@ export const products = {
       label: "1 – 3 triệu",
       items: [
         {
-          name: "Thiên Vi full đá tròn 6 ly",
-          price: 1500000,
-          fromPrice: 1300000,
-          image: "/images/products/thien-vi-da-tron-6ly.webp",
-          alt: "Vòng Thiên Vi full đá tròn 6 ly phối hồng, vàng, xám, bi bạc",
+          name: "Thiên Vi mix ngọc hoa trà & ngọc trai",
+          price: 1550000,
+          image: "/images/products/mix-ngoc-hoa-tra-ngoc-trai.webp",
+          alt: "Lắc bạc phối thạch anh dâu tây, moonstone, ngọc trai, ngọc phỉ thuý xanh và hoa trà ngọc",
         },
         {
-          name: "Vô Vi Phỉ Thuý Lam",
-          price: 1550000,
-          image: "/images/products/vo-vi-phi-thuy-lam-pdf.webp",
-          alt: "Vòng Vô Vi phối ngọc trai, ngọc phỉ thuý lam bánh xe và charm trái tim bạc",
+          name: "Lắc bạc thạch anh dâu tây charm nơ",
+          price: 1500000,
+          image: "/images/products/lac-dau-tay-charm-no.webp",
+          alt: "Bàn tay cầm lắc bạc có hạt thạch anh dâu tây hồng, chuỗi hạt xanh ngọc và charm nơ bạc",
         },
         {
           name: "Thiên Vi full đá tròn 8 ly Tì Hưu",
           price: 2390000,
-          fromPrice: 2190000,
-          image: "/images/products/thien-vi-ti-huu-8ly-pdf.webp",
-          alt: "Vòng Thiên Vi đá tròn 8 ly có tì hưu ngọc phỉ thuý lam và charm bạc",
+          image: "/images/products/thien-vi-ti-huu-charm-phuc.webp",
+          alt: "Vòng đá tròn 8 ly phối dâu tây, moonstone, thạch anh tóc vàng, tì hưu ngọc xanh và charm chữ Phúc bạc",
         },
         {
-          name: "Thiên Ân quấn 1 Phúc – Lộc – Thọ",
-          price: 2525000,
-          fromPrice: 2325000,
-          image: "/images/products/thien-an-quan-1.webp",
-          alt: "Tay cầm vòng Thiên Ân quấn 1: ngọc bích xanh, đá bánh xe nhiều màu và charm rơi",
+          name: "Ngọc Phỉ Thuý tì hưu cỏ bốn lá",
+          price: 1860000,
+          image: "/images/products/ngoc-phi-thuy-ti-huu-co-4-la.webp",
+          alt: "Lắc ngọc phỉ thuý xanh tròn có tì hưu ngọc xanh đậm và cỏ bốn lá ngọc, khoá bạc",
         },
       ],
     },
