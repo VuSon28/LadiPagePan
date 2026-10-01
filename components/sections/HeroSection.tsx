@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="band-clay relative isolate flex min-h-[min(150vw,680px)] flex-col justify-end overflow-hidden pb-11"
+      className="band-clay relative isolate flex flex-col overflow-hidden pt-5 pb-11"
     >
       {/* Ảnh tràn viền, phủ sắc cam để ăn nhập với bảng màu và giữ chữ đọc rõ. */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
@@ -23,9 +23,18 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(122,50,8,0.65)_0%,rgba(185,81,24,0.15)_30%,rgba(185,81,24,0.9)_68%,var(--color-clay)_100%)]" />
       </div>
 
-      <Header overlay />
+      {/* Logo chính thức (file gốc Pancharm) đặt giữa, ngay dưới thanh menu. */}
+      <Header overlay logo={false} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo-pancharm-official.png"
+        alt="Pancharm"
+        width={600}
+        height={486}
+        className="mx-auto h-auto w-[132px]"
+      />
 
-      <div className="container-page">
+      <div className="container-page mt-[min(30vw,140px)]">
         <p className="text-[11.5px] leading-relaxed font-semibold tracking-[0.14em] whitespace-nowrap text-[var(--text-soft)] uppercase">
           {hero.eyebrow}
         </p>

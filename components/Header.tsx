@@ -7,7 +7,7 @@ import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 
 /** Header nằm đè lên ảnh hero, logo ở giữa; menu mở ra danh sách link tới từng phần. */
-export function Header({ overlay = false }: { overlay?: boolean }) {
+export function Header({ overlay = false, logo = true }: { overlay?: boolean; logo?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,9 +16,13 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
     >
       {/* Cột trái để trống cùng bề rộng nút menu, nhờ vậy logo nằm đúng giữa màn hình. */}
       <span aria-hidden="true" />
-      <Link href="/" aria-label="Pancharm – về đầu trang" className="justify-self-center">
-        <Logo size="lg" />
-      </Link>
+      {logo ? (
+        <Link href="/" aria-label="Pancharm – về đầu trang" className="justify-self-center">
+          <Logo size="lg" />
+        </Link>
+      ) : (
+        <span aria-hidden="true" />
+      )}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
