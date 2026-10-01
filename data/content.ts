@@ -61,9 +61,11 @@ export const insight = {
   body: "10 người mệnh Hoả nhưng có 10 tính cách khác nhau, vậy có thể đeo cùng 1 loại đá không?",
   diagramTitle: "Vậy 1 chiếc vòng Pancharm được tạo ra thế nào?",
   designImage: {
-    src: "/images/bat-tu/thiet-ke-thien-vi-ti-huu.webp",
-    alt: "Vòng Thiên Vi full đá tròn 8 ly Tì Hưu: hạt thạch anh hồng, vàng, moonstone phối tì hưu ngọc xanh",
-    caption: "Thiết kế thực tế: Thiên Vi full đá tròn 8 ly Tì Hưu",
+    src: "/images/bat-tu/ban-thiet-ke-vo-vi.webp",
+    alt: "Bản thiết kế vòng Vô Vi của Pancharm: phác thảo tay ghi chú citrine, sunstone, thạch anh dâu tây, hắc nguyệt quang, moonstone, ngọc trai, 6 bi tam giác bạc, charm bạc; bên phải là bản phối màu hoàn chỉnh",
+    caption: "Bản thiết kế thực tế: BST Vô Vi (chạm để phóng to)",
+    width: 1600,
+    height: 1200,
   },
   meaningImage: {
     src: "/images/bat-tu/y-nghia-thien-vi-ti-huu.webp",

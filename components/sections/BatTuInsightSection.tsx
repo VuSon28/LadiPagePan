@@ -118,18 +118,24 @@ export function BatTuInsightSection() {
 function StepImage({
   image,
 }: {
-  image: { src: string; alt: string; caption: string };
+  image: { src: string; alt: string; caption: string; width?: number; height?: number };
 }) {
+  // Ảnh không khai báo kích thước thì coi là vuông (ảnh sản phẩm); bản thiết kế giữ đúng tỉ lệ để không mất chữ.
+  const width = image.width ?? 960;
+  const height = image.height ?? 960;
   return (
     <div>
-      <Image
-        src={image.src}
-        alt={image.alt}
-        width={960}
-        height={960}
-        sizes="(min-width: 480px) 400px, 88vw"
-        className="aspect-square w-full rounded-2xl border border-[var(--line-soft)] object-cover"
-      />
+      <a href={image.src} target="_blank" rel="noopener" aria-label={`Phóng to: ${image.caption}`}>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={width}
+          height={height}
+          sizes="(min-width: 480px) 400px, 88vw"
+          style={{ aspectRatio: `${width} / ${height}` }}
+          className="w-full rounded-2xl border border-[var(--line-soft)] bg-white object-cover"
+        />
+      </a>
       <p className="mt-2 text-center text-[12.5px] leading-snug text-muted">
         {image.caption}
       </p>
