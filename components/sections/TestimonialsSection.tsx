@@ -58,12 +58,12 @@ const avatarColors = ["bg-clay", "bg-evergreen", "bg-rosewood", "bg-brick", "bg-
 
 /** Câu cảm ơn mẫu của shop, chọn theo index để mỗi comment có 1 câu cố định. */
 const shopReplies = [
-  "Dạ, Pancharm cảm ơn chị đã tin tưởng và dành thời gian chia sẻ cảm nhận ạ",
-  "Dạ Pancharm cảm ơn chị nhiều lắm, chúc chị luôn bình an và nhiều năng lượng tích cực ạ",
-  "Dạ cảm ơn chị, Pancharm luôn ở đây nếu chị cần hỗ trợ thêm ạ",
-  "Pancharm biết ơn chị đã đồng hành cùng shop, chúc chị thật nhiều may mắn ạ",
-  "Dạ, Pancharm cảm ơn chị đã ủng hộ, chúc chị thật nhiều điều tốt lành ạ",
-  "Dạ cảm ơn chị đã phản hồi, Pancharm rất vui khi chị hài lòng ạ",
+  "Pancharm cảm ơn em đã tin tưởng và dành thời gian chia sẻ cảm nhận",
+  "Pancharm cảm ơn em nhiều lắm, chúc em luôn bình an và nhiều năng lượng tích cực",
+  "Cảm ơn em, Pancharm luôn ở đây nếu em cần hỗ trợ thêm",
+  "Pancharm biết ơn em đã đồng hành cùng shop, chúc em thật nhiều may mắn",
+  "Pancharm cảm ơn em đã ủng hộ, chúc em thật nhiều điều tốt lành",
+  "Cảm ơn em đã phản hồi, Pancharm rất vui khi em hài lòng",
 ];
 
 /** Timestamp giả lập theo index: index càng nhỏ càng gần hiện tại. */
@@ -137,10 +137,10 @@ function ShopReply({ reply, when }: { reply: string; when: string }) {
     <div className="mt-3 flex gap-2.5">
       <span
         aria-hidden="true"
-        className="grid size-9 shrink-0 place-items-center rounded-sm border border-line bg-cream"
+        className="grid size-9 shrink-0 place-items-center rounded-sm bg-clay"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo-mark.svg" alt="" width={22} height={22} style={{ width: 22, height: 22 }} />
+        <img src="/logo-pancharm-icon.png" alt="" width={30} height={30} style={{ width: 30, height: 30 }} />
       </span>
       <div className="min-w-0 flex-1">
         <p className="text-[14px] font-bold text-[#4b4f56]">Pancharm</p>
