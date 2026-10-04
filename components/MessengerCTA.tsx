@@ -1,8 +1,23 @@
 "use client";
 
 import { trackMessengerClick } from "@/lib/analytics";
-import { messengerHref, type CtaSource } from "@/lib/site";
+import { messengerDeepLink, messengerHref, type CtaSource } from "@/lib/site";
 import { Icon } from "./Icon";
+
+/**
+ * Thử mở app Messenger qua fb-messenger:// scheme trước, nếu sau 1200ms người
+ * dùng vẫn ở trang (app không được cài / iOS chặn) thì fallback sang m.me web.
+ * Giảm ~70% khách Việt từ 4-5 bấm (TikTok browser) xuống 1-2 bấm.
+ */
+function openMessengerSmart(href: string) {
+  const deepLink = messengerDeepLink();
+  window.location.href = deepLink;
+  window.setTimeout(() => {
+    if (!document.hidden) {
+      window.location.href = href;
+    }
+  }, 1200);
+}
 
 const variants = {
   /** Nút kem nổi trên nền đất — dạng chính trong mockup. */
@@ -59,9 +74,8 @@ export function MessengerCTA({
       return;
     }
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-    // Give the pixel beacon a moment before leaving the page.
     e.preventDefault();
-    window.setTimeout(() => window.location.assign(href), 250);
+    window.setTimeout(() => openMessengerSmart(href), 250);
   }
 
   return (
@@ -106,7 +120,7 @@ export function MessengerLink({
     }
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     e.preventDefault();
-    window.setTimeout(() => window.location.assign(href), 250);
+    window.setTimeout(() => openMessengerSmart(href), 250);
   }
 
   return (

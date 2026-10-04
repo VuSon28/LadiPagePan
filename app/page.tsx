@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { OrderNotificationToast } from "@/components/OrderNotificationToast";
 import { StickyMessengerCTA } from "@/components/StickyMessengerCTA";
+import { TikTokBannerHint } from "@/components/TikTokBannerHint";
 import { BatTuInsightSection } from "@/components/sections/BatTuInsightSection";
 import { CertificateSection } from "@/components/sections/CertificateSection";
 import { CollectionShowcase } from "@/components/sections/CollectionShowcase";
@@ -19,6 +20,7 @@ import { TrustStrip } from "@/components/sections/TrustStrip";
 export default function Home() {
   return (
     <>
+      <TikTokBannerHint />
       <main>
         <HeroSection />
         <TrustStrip />

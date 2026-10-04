@@ -6,6 +6,13 @@ export const site = {
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "",
 };
 
+/**
+ * Numeric Page ID của Pancharm Trang Sức Phong Thủy.
+ * Dùng cho deep link fb-messenger:// và App Links meta tags — resolve nhanh hơn
+ * username, không bị kẹt tại trang Facebook web trung gian.
+ */
+export const MESSENGER_PAGE_ID = "110003875531178";
+
 export type CtaSource = "hero" | "process" | "benefit" | "offer" | "final" | "sticky";
 
 /**
@@ -23,4 +30,9 @@ export function messengerHref(source: CtaSource): string {
   } catch {
     return site.messengerUrl;
   }
+}
+
+/** Deep link mở thẳng app Messenger (bỏ qua trang Facebook web trung gian). */
+export function messengerDeepLink(): string {
+  return `fb-messenger://user-thread/${MESSENGER_PAGE_ID}`;
 }
