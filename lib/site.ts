@@ -2,7 +2,7 @@ export const site = {
   name: "Pancharm",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   messengerUrl: process.env.NEXT_PUBLIC_MESSENGER_URL || "",
-  tiktokPixelId: process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "",
+  tiktokPixelId: process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "DB2A61JC77U9003F8G9G",
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "",
 };
 
