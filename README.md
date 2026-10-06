@@ -27,7 +27,7 @@ npm run dev                  # http://localhost:3000
 | Biến | Bắt buộc | Ghi chú |
 |---|---|---|
 | `NEXT_PUBLIC_MESSENGER_URL` | Có | Ví dụ `https://m.me/pancharm`. Với link m.me, trang tự gắn `?ref=landing_<vị trí>` để biết khách bấm từ nút nào. |
-| `NEXT_PUBLIC_TIKTOK_PIXEL_ID` | Có (trước khi chạy ads) | Bỏ trống thì pixel không được tải. |
+| `NEXT_PUBLIC_TIKTOK_PIXEL_ID` | Không | Mặc định dùng `DB2A61JC77U9003F8G9G` khi chưa khai báo biến. Có thể ghi đè bằng ID khác; đặt giá trị rỗng để tắt pixel. |
 | `NEXT_PUBLIC_SITE_URL` | Có (production) | Domain chính thức, dùng cho canonical, OG image và sitemap. |
 | `NEXT_PUBLIC_GA4_ID` | Không | `G-XXXXXXXXXX` |
 
