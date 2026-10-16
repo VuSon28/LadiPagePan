@@ -2,27 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { offer } from "@/data/content";
+import { msUntilEndOfDayVN, splitMs } from "@/lib/countdown";
 import { Icon } from "../Icon";
 import { MessengerCTA } from "../MessengerCTA";
-
-const DAY = 86_400_000;
-const VN_OFFSET = 7 * 3_600_000;
-
-/** Ưu đãi có thật trong ngày: đếm tới 23:59:59 giờ Việt Nam, sang ngày mới thì đếm lại. */
-function msUntilEndOfDayVN(now: number) {
-  const vn = now + VN_OFFSET;
-  return Math.floor(vn / DAY) * DAY + DAY - vn;
-}
-
-function split(ms: number) {
-  const s = Math.floor(ms / 1000);
-  return [
-    Math.floor(s / 86_400),
-    Math.floor(s / 3600) % 24,
-    Math.floor(s / 60) % 60,
-    s % 60,
-  ];
-}
 
 export function OfferCountdown() {
   // null trên server để HTML render trước không lệch với giờ của máy khách.
@@ -35,7 +17,7 @@ export function OfferCountdown() {
     return () => window.clearInterval(id);
   }, []);
 
-  const parts = remaining === null ? null : split(remaining);
+  const parts = remaining === null ? null : splitMs(remaining);
 
   return (
     <section

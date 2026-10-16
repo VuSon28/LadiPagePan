@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title,
   description,
+  icons: {
+    icon: "/logo-pancharm-icon.png",
+    apple: "/logo-pancharm-icon.png",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

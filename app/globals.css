@@ -62,6 +62,17 @@ body {
   border-radius: 8px;
 }
 
+.fb-comments {
+  --fb-text: #4b4f56;
+  --fb-secondary: #606770;
+  --fb-muted: #90949c;
+  --fb-border: #dddfe2;
+  --fb-link: #385898;
+  --fb-bg: #f5f6f7;
+  --fb-content: #1c1e21;
+  --fb-star: #f5a623;
+}
+
 @layer components {
   /* Landing chạy cho điện thoại: mọi màn hình đều hiển thị một cột ≤ 480px. */
   .phone-shell {
@@ -203,6 +214,23 @@ body {
   animation: typing-bounce 1s ease-in-out infinite;
 }
 
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: reveal-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -218,5 +246,8 @@ body {
   .animate-cta-bounce,
   .animate-typing-bounce {
     animation: none;
+  }
+  .reveal {
+    opacity: 1;
   }
 }
