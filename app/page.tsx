@@ -13,40 +13,13 @@ import { PrivilegesSection } from "@/components/sections/PrivilegesSection";
 import { ProductShowcase } from "@/components/sections/ProductShowcase";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { TrustStrip } from "@/components/sections/TrustStrip";
-import { site } from "@/lib/site";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  name: "Vòng đá phong thủy cá nhân hóa theo Bát Tự – Pancharm",
-  description:
-    "Pancharm luận Bát Tự từ ngày, tháng, năm và giờ sinh để tư vấn loại đá và thiết kế chiếc vòng phong thủy riêng cho bạn.",
-  image: [
-    `${site.url}/images/hero/hero-pancharm-mobile.webp`,
-    `${site.url}/images/og/og-pancharm.jpg`,
-  ],
-  brand: { "@type": "Brand", name: "Pancharm" },
-  offers: {
-    "@type": "AggregateOffer",
-    lowPrice: 720000,
-    highPrice: 6025000,
-    priceCurrency: "VND",
-    availability: "https://schema.org/InStock",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "500",
-  },
-};
-
+// Thứ tự khối bám theo mockup đã duyệt.
+// Đang tạm ẩn: BeliefStatement (“Không chỉ là màu hợp mệnh”), ConsultationProcess (quy trình 4 bước) và ExpertSection — component và
+// nội dung vẫn còn, thêm lại bằng cách import rồi chèn vào <main> bên dưới.
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <TikTokBannerHint />
       <main>
         <HeroSection />

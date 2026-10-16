@@ -25,7 +25,8 @@ export function HeroSection() {
 
       {/* Logo chính thức (file gốc Pancharm) đặt giữa, ngay dưới thanh menu. */}
       <Header overlay logo={false} />
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src="/logo-pancharm-official.png"
         alt="Pancharm"
         width={600}
